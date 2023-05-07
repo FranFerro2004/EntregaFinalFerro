@@ -2,8 +2,61 @@
     max-width: 100%;
     display: block;
     position: relative;
-    width: 200px;
-    right: 65px;
-    bottom: 15px;
+    width: 150px;
+    right: 20px;
+    bottom: px;
 }
 
+.navMenu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    
+}
+
+.navMenu li{
+    display: inline-block;
+    height: 100px;
+
+}
+
+
+.navMenu a{
+    text-decoration: none;
+    display: block;
+    padding: 55px ;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+
+}
+
+
+
+@media (hover: hover){
+    .navMenu a:hover{
+    color: ;
+    background-color:rgba(114, 114, 114, 0.562) ;
+
+    }
+}
+
+.navMenu a:active{
+    background-color: white;
+
+}
+
+.navMenu{
+    display: block;
+    position:absolute;
+    top: 20px;
+    right: 200px;
+
+}
+
+.imgIndex{
+    background-image: 
+
+}
