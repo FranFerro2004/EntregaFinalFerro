@@ -57,6 +57,44 @@
 }
 
 .imgIndex{
-    background-image: 
+    background-image: url(../imagenes/curry\ jugando.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    opacity: 87%;
+    
+}
+
+.estiloLetra{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+
+.pIndex{
+    
+    text-align: justify;
+    width: 700px;
+    position: relative;
+    left: 600px;
+    padding: 7px;
+}
+
+.backColor{
+    background-color: rgba(201, 201, 201, 0.377);
+}
+
+#h1Index{
+    position: absolute;
+    top: 230px;
+    left: 100px;
+   
+}
+
+#mainIndex{
+    position: relative;
+    top: 00px;
 
 }
