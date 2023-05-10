@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
 .logoNBA{
     max-width: 100%;
     display: block;
@@ -39,7 +45,8 @@
     .navMenu a:hover{
     color: ;
     background-color:rgba(114, 114, 114, 0.562) ;
-
+    height: 10px;
+   
     }
 }
 
@@ -52,7 +59,8 @@
     display: block;
     position:absolute;
     top: 20px;
-    right: 200px;
+    right: 100px;
+    
 
 }
 
@@ -80,6 +88,7 @@
     position: relative;
     left: 600px;
     padding: 7px;
+    top: 65px;
 }
 
 .backColor{
@@ -88,13 +97,8 @@
 
 #h1Index{
     position: absolute;
-    top: 230px;
+    top: 250px;
     left: 100px;
    
 }
 
-#mainIndex{
-    position: relative;
-    top: 00px;
-
-}
