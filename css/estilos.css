@@ -3,27 +3,41 @@
     padding: 0;
 }
 
+main{
+    margin-left: 25px;
+
+}
+
+header{
+    position: relative;
+    height: 120px;
+    display: block;
+    margin-bottom: 50px;
+
+}
 
 .logoNBA{
     max-width: 100%;
     display: block;
-    position: relative;
+    position: absolute;
     width: 150px;
-    right: 20px;
-    bottom: px;
+    top: 5px;
+    left: 5px;
 }
 
 .navMenu ul{
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: white;
+    text-align: center;
+   
     
 }
 
 .navMenu li{
     display: inline-block;
     height: 100px;
+   
 
 }
 
@@ -70,6 +84,9 @@
     background-repeat: no-repeat;
     height: 1000px;
     opacity: 87%;
+    display: block;
+    margin-left: 0px;
+    
     
 }
 
@@ -82,14 +99,24 @@
 
 
 .pIndex{
-    
+
     text-align: justify;
     width: 700px;
     position: relative;
     left: 600px;
-    padding: 7px;
-    top: 65px;
+    top: 50px;
+    background-color: rgba(128, 128, 128, 0.137);
+    padding: 50px;
+
+    
 }
+
+
+
+.pIndex li{
+    list-style: none;
+}
+    
 
 .backColor{
     background-color: rgba(201, 201, 201, 0.377);
@@ -98,7 +125,68 @@
 #h1Index{
     position: absolute;
     top: 250px;
-    left: 100px;
-   
+    left: 60px;
+    opacity: 1000%;
+    margin: 25px;
+   z-index: 2;
+    
 }
 
+footer{
+    margin: 25px;
+    position: absolute; 
+    bottom: 0px;
+    z-index: 3;
+    
+}
+
+footer li{
+    list-style: none;
+    position: relative;
+    left: 25px;
+
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+footer img{
+    max-width: 100%;
+    height: 50px;
+    width: 50px;
+
+}
+
+footer p{
+    margin: 0px;
+}
+
+.bloque{
+    display: block;
+    margin: 25px;
+
+
+}
+
+p{
+    margin: 30px;
+
+}
+
+section{
+    margin: 25px;
+
+}
+
+
+
+
+
+/*position: relative;
+    left: 600px;
+    padding: 7px;
+    top: 65px;*/
