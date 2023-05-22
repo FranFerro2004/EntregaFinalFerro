@@ -165,6 +165,12 @@ header{
     margin: 0px;
 }
 
+.footerIndx li{
+    display: inline;
+    padding: 5px;
+}
+
+
 .bloque{
     display: block;
     margin: 25px;
@@ -214,16 +220,87 @@ form{
 
 }
 
-.mainHisto{
+.bodyHisto{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid grid-template-areas: 
-    "headerHisto headerHisto"
-    "mainHisto video"
-    "footerHisto footerHisto "
-    
+    grid-template-rows: 0.4fr 3fr 1fr ;
+    grid-template-areas: 
+    "header header"
+    "main video"
+    "footer video"
     ;
+}
 
+.headerHisto{
+    grid-area: header;
+} 
+
+.mainHisto{
+    grid-area: main;
+    padding-top: 0px;
+}
+
+.video{
+    grid-area: video;
+   
+}
+
+.video{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.footerHisto{
+    margin: 30px;
+    margin-left: 50px;
+}
+
+.footerHisto a{
+    text-decoration: none;
+    color: black;
+    
+    
+}
+
+.footerHisto li{
+    list-style: none;
+    padding-left: 40px;
+}
+
+.footerHisto p{
+ margin: 0px;
 
 }
+
+.footerHisto img{
+    max-width: 100%;
+    height: 50px;
+    width: 50px;
+ 
+}
+
+.footerHisto li{
+    display: inline;
+    padding: 5px;
+}
+
+
+.bodyPosi{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr 1fr;
+    grid-area: 
+    "header header"
+    "este oeste"
+    "footer footer"   
+    ;
+
+}
+
+
+
+
