@@ -98,7 +98,7 @@ header{
 }
 
 
-.pIndex{
+./* pIndex{
 
     text-align: justify;
     width: 700px;
@@ -109,7 +109,7 @@ header{
     padding: 50px;
 
     
-}
+} */
 
 
 
@@ -122,7 +122,7 @@ header{
     background-color: rgba(201, 201, 201, 0.377);
 }
 
-#h1Index{
+/* #h1Index{
     position: absolute;
     top: 250px;
     left: 60px;
@@ -130,13 +130,10 @@ header{
     margin: 25px;
    z-index: 2;
     
-}
+} */
 
 .footerIndx{
     margin: 25px;
-    position: absolute; 
-    bottom: 0px;
-    z-index: 3;
     
 }
 
@@ -178,10 +175,10 @@ header{
 
 }
 
-p{
-    margin: 30px;
+ p{
+    margin: 25px;
 
-}
+} 
 
 section{
     margin: 25px;
@@ -289,18 +286,53 @@ form{
 }
 
 
-.bodyPosi{
+.bodyIndex{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 1fr 1fr;
-    grid-area: 
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-areas: 
     "header header"
-    "este oeste"
-    "footer footer"   
+    "h1 main"
+    "footer main"
+
     ;
 
 }
 
 
+.mainIndex{
+    grid-area: main;
+
+}
+
+#h1index{
+    grid-area: h1;
+
+}
+
+.footerIndx{
+    grid-area: footer;
+
+}
+
+.headerIndex{
+    grid-area: header;
+
+}
+
+.h3Index{
+    margin-left: 25px;
+}
+
+#ulIndexmain{ 
+    padding: 25px;
+    padding-left: 40px;
+}
+
+#comoeselformato{
+    padding: 25px;
+    padding-top: 20px;
+
+}
 
 
