@@ -98,21 +98,6 @@ header{
 }
 
 
-./* pIndex{
-
-    text-align: justify;
-    width: 700px;
-    position: relative;
-    left: 600px;
-    top: 50px;
-    background-color: rgba(128, 128, 128, 0.137);
-    padding: 50px;
-
-    
-} */
-
-
-
 .pIndex li{
     list-style: none;
 }
@@ -122,19 +107,12 @@ header{
     background-color: rgba(201, 201, 201, 0.377);
 }
 
-/* #h1Index{
-    position: absolute;
-    top: 250px;
-    left: 60px;
-    opacity: 1000%;
-    margin: 25px;
-   z-index: 2;
-    
-} */
+
 
 .footerIndx{
     margin: 25px;
-    
+    position: relative;
+    top: 150px;    
 }
 
 .footerIndx li{
@@ -289,7 +267,7 @@ form{
 .bodyIndex{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-rows: 0.2fr 25em 25em;
     grid-template-areas: 
     "header header"
     "h1 main"
@@ -335,4 +313,77 @@ form{
 
 }
 
+#h1Index{
+    position: relative;
+    left: 180px;
+    top: 150px;
+    height: 75px;
+    width: 250px;
 
+}
+
+.bodyFoto{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "header header"
+    "foto1 foto2"
+    "foto3 foto4"
+    "foto5 foto6"
+    "foto7 foto8"
+    "footer footer"
+    ;
+}
+
+.headerFoto{
+    grid-area: header;
+
+}
+
+.ulFoto{
+    grid-area: fotos;
+
+}
+
+.footerFoto{
+    grid-area: footer;
+
+}
+
+/* .ulFoto{
+    height: 1700px;
+    display: flex;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
+
+
+}
+ */
+
+.ulFoto img{
+    height: auto;
+    width: 35em;
+}
+
+/* Responsive Index */
+
+@media screen and (max-with: 768px){
+    .bodyIndex{
+    grid-template-columns: 35% 65%;
+    grid-template-rows: repeat( 4, 1fr);
+    grid-template-areas: 
+    "header header"
+    "h1 main"
+    "footer main"
+    ;   
+    }
+
+    #h1Index{
+        display: none;
+    }
+
+}
