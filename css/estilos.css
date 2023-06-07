@@ -30,14 +30,13 @@ header{
     padding: 0;
     margin: 0;
     text-align: center;
-   
-    
+
 }
 
 .navMenu li{
     display: inline-block;
     height: 100px;
-   
+
 
 }
 
@@ -60,7 +59,6 @@ header{
     color: ;
     background-color:rgba(114, 114, 114, 0.562) ;
     height: 10px;
-   
     }
 }
 
@@ -153,7 +151,7 @@ header{
 
 }
 
- p{
+p{
     margin: 25px;
 
 } 
@@ -247,7 +245,7 @@ form{
 }
 
 .footerHisto p{
- margin: 0px;
+margin: 0px;
 
 }
 
@@ -313,7 +311,7 @@ form{
 
 }
 
-#h1Index{
+ #h1Index{
     position: relative;
     left: 180px;
     top: 150px;
@@ -371,19 +369,67 @@ form{
 
 /* Responsive Index */
 
-@media screen and (max-with: 768px){
+@media screen and (max-width: 768px){
+
     .bodyIndex{
     grid-template-columns: 35% 65%;
-    grid-template-rows: repeat( 4, 1fr);
+    grid-template-rows: 0.23fr repeat( 2, 0.5fr);
     grid-template-areas: 
     "header header"
     "h1 main"
     "footer main"
+    
     ;   
     }
 
     #h1Index{
-        display: none;
+    position: relative;
+    top: 25px;
+    left: 25px;
+
     }
+
+    .navMenu li{
+    width: 200px;
+    height: 70px;
+    position: relative;
+    left: 100px;
+    bottom: 40px;
+    }
+
+    
+    
+
+}
+
+
+@media screen and (max-width: 1024px){
+
+    .bodyIndex{
+        display: grid;
+        grid-template-rows: 0.23fr repeat( 2, 0.5fr);
+        grid-template-columns: 35% 65%;
+        grid-template-areas: 
+        "header header"
+        "h1 main"
+        "footer main"
+        ;
+
+    }
+
+    #h1Index{
+    position: relative;
+    right: 50px;
+    
+    }
+
+    .navMenu li{
+    position: relative;
+    bottom: 45px;
+    left: 80px;
+
+    }
+    
+
 
 }
