@@ -393,11 +393,15 @@ margin: 0px;
     }
 
     .navMenu li{
-    width: 200px;
+    width: 170px;
     height: 70px;
     position: relative;
     left: 100px;
     bottom: 40px;
+    }
+
+    .navMenu a{
+        padding: 15px;
     }
 
     /* Historia */
@@ -407,7 +411,7 @@ margin: 0px;
 
     }
 
-    /* .bodyHisto{
+    .bodyHisto{
         display: grid;
         grid-template-columns: 25% 75%;
         grid-template-rows: 0.4 300px 0.7fr 0.5fr;
@@ -418,7 +422,7 @@ margin: 0px;
         "footer footer"
         ;
     }
- */
+ 
 
 }
 
