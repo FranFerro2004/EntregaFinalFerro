@@ -311,7 +311,8 @@ margin: 0px;
 
 }
 
- #h1Index{
+#h1Index{
+    display: block;
     position: relative;
     left: 180px;
     top: 150px;
@@ -367,9 +368,11 @@ margin: 0px;
     width: 35em;
 }
 
-/* Responsive Index */
+/* Responsive */
 
 @media screen and (max-width: 768px){
+
+    /* Index */
 
     .bodyIndex{
     grid-template-columns: 35% 65%;
@@ -397,8 +400,25 @@ margin: 0px;
     bottom: 40px;
     }
 
-    
-    
+    /* Historia */
+
+    .mainHisto{
+        height: 300px;
+
+    }
+
+    /* .bodyHisto{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 0.4 300px 0.7fr 0.5fr;
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "video video"
+        "footer footer"
+        ;
+    }
+ */
 
 }
 
@@ -430,6 +450,66 @@ margin: 0px;
 
     }
     
+ /* Historia */
 
+    .navMenu a{
+        padding: 25px;
+
+    }
+
+    .navMenu ul{
+        position: relative;
+        left: 80px;
+        top: 75px;
+        width: 1000px;
+
+    }
+
+    .bodyHisto{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 0.4fr 3fr 1fr;
+    }
+
+    .video iframe{
+        height: 300px;
+        width: 500px;
+
+    }
+
+    
 
 }
+
+
+@media screen and (max-width: 375px){
+
+    .bodyIndex{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.1fr 1fr 0.4fr;
+        grid-template-areas: 
+        "header"
+        "h1"
+        "main"
+        "footer"
+        ;
+    
+
+    }
+
+    #h1Index{
+        grid-area: "h1";
+        margin: 0px;
+        padding: 0px;
+        align-self: center;
+        justify-self: center;
+        
+    }
+
+    main {
+        margin: 0px;
+    }
+
+}
+
