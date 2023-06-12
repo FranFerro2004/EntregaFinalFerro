@@ -9,48 +9,50 @@ main{
 }
 
 header{
-    position: relative;
-    height: 120px;
-    display: block;
+    height: 200px;
     margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "logoNBA navMenu"
+    ;
 
-}
+} 
 
 .logoNBA{
-    max-width: 100%;
-    display: block;
-    position: absolute;
+    grid-area: "logoNBA";
+    align-self: center;
     width: 150px;
-    top: 5px;
-    left: 5px;
+    
+}
+
+.navMenu{
+    grid-area: "navMenu";
+    align-self: center;
+    margin: 50px;
+    
 }
 
 .navMenu ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-
-}
-
-.navMenu li{
-    display: inline-block;
-    height: 100px;
-
-
+    align-items: center;
+    justify-content: space-around;
+    
 }
 
 
 .navMenu a{
     text-decoration: none;
-    display: block;
-    padding: 55px ;
     font-size: larger;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
-
-}
+    
+} 
 
 
 
@@ -58,7 +60,7 @@ header{
     .navMenu a:hover{
     color: ;
     background-color:rgba(114, 114, 114, 0.562) ;
-    height: 10px;
+    height: 50px;
     }
 }
 
@@ -67,14 +69,8 @@ header{
 
 }
 
-.navMenu{
-    display: block;
-    position:absolute;
-    top: 20px;
-    right: 100px;
-    
 
-}
+
 
 .imgIndex{
     background-image: url(../imagenes/curry\ jugando.jpg);
@@ -161,7 +157,7 @@ section{
 
 }
 
-form{
+/* form{
     display: block;
     text-align: center;
     width: 500px;
@@ -169,7 +165,7 @@ form{
     left: 500px;
     top: 100px;
     color: blanchedalmond;
-}
+} */
 
 .imgContact{
     background-image: url(../imagenes/imagen\ dunk.jpg);
@@ -215,7 +211,7 @@ form{
 
 .video{
     grid-area: video;
-   
+
 }
 
 .video{
@@ -253,7 +249,7 @@ margin: 0px;
     max-width: 100%;
     height: 50px;
     width: 50px;
- 
+
 }
 
 .footerHisto li{
@@ -265,7 +261,7 @@ margin: 0px;
 .bodyIndex{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 0.2fr 25em 25em;
+    grid-template-rows: 12em 25em 25em;
     grid-template-areas: 
     "header header"
     "h1 main"
@@ -311,15 +307,7 @@ margin: 0px;
 
 }
 
-#h1Index{
-    display: block;
-    position: relative;
-    left: 180px;
-    top: 150px;
-    height: 75px;
-    width: 250px;
 
-}
 
 .bodyFoto{
     display: grid;
@@ -350,7 +338,7 @@ margin: 0px;
 
 }
 
-/* .ulFoto{
+.ulFoto{
     height: 1700px;
     display: flex;
     align-content: space-evenly;
@@ -361,16 +349,105 @@ margin: 0px;
 
 
 }
- */
+
 
 .ulFoto img{
     height: auto;
     width: 35em;
 }
 
+
+
 /* Responsive */
 
-@media screen and (max-width: 768px){
+
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+    .bodyIndex{
+        display: grid;
+        grid-template-rows: 0.23fr repeat( 2, 0.5fr);
+        grid-template-columns: 35% 65%;
+        grid-template-areas: 
+        "header header"
+        "h1 main"
+        "footer main"
+        ;
+
+    }
+
+    #h1Index{
+    padding-top: 25px;
+    justify-self: center;
+    
+    }
+
+
+    
+    
+ /* Historia */
+
+    .navMenu a{
+        padding: 25px;
+
+    }
+
+
+    .bodyHisto{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 0.4fr 3fr 1fr;
+    }
+
+    .video iframe{
+        height: 300px;
+        width: 500px;
+
+    }
+
+    .navMenu{
+        width: 700px;
+        position: relative;
+        right: 90px;
+        bottom: 10px;
+        
+
+    }
+
+    /* Contacto */
+
+    .bodyContacto{
+        display: grid;
+        grid-template-columns: repeat( 2, 1fr);
+        grid-template-rows: 0.3fr 1fr 0.3fr;
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer"
+        ;
+
+    }
+
+    .mainContacto{
+        grid-area: "main";
+        
+    }
+
+    header{
+        grid-area: "header";
+    }
+
+    .footerContacto{
+        grid-area: "footer";
+    }
+
+
+}
+
+
+
+@media screen and (min-width: 321px) and (max-width: 768px){
 
     /* Index */
 
@@ -386,35 +463,21 @@ margin: 0px;
     }
 
     #h1Index{
-    position: relative;
-    top: 25px;
-    left: 25px;
+    padding-top: 50px;
+    padding-left: 40px;
+
+    
 
     }
 
-    .navMenu li{
-    width: 170px;
-    height: 70px;
-    position: relative;
-    left: 100px;
-    bottom: 40px;
-    }
-
-    .navMenu a{
-        padding: 15px;
-    }
 
     /* Historia */
 
-    .mainHisto{
-        height: 300px;
-
-    }
 
     .bodyHisto{
         display: grid;
         grid-template-columns: 25% 75%;
-        grid-template-rows: 0.4 300px 0.7fr 0.5fr;
+        grid-template-rows: 0.4 100px 0.7fr 0.5fr;
         grid-template-areas: 
         "header header"
         "main main"
@@ -422,76 +485,35 @@ margin: 0px;
         "footer footer"
         ;
     }
- 
-
-}
 
 
-@media screen and (max-width: 1024px){
 
-    .bodyIndex{
-        display: grid;
-        grid-template-rows: 0.23fr repeat( 2, 0.5fr);
-        grid-template-columns: 35% 65%;
-        grid-template-areas: 
-        "header header"
-        "h1 main"
-        "footer main"
-        ;
+    .navMenu{
+        width: 600px;
+        position: relative;
+        right: 100px;
 
     }
-
-    #h1Index{
-    position: relative;
-    right: 50px;
-    
-    }
-
-    .navMenu li{
-    position: relative;
-    bottom: 45px;
-    left: 80px;
-
-    }
-    
- /* Historia */
 
     .navMenu a{
-        padding: 25px;
-
-    }
-
-    .navMenu ul{
-        position: relative;
-        left: 80px;
-        top: 75px;
-        width: 1000px;
-
-    }
-
-    .bodyHisto{
-        display: grid;
-        grid-template-columns: 40% 60%;
-        grid-template-rows: 0.4fr 3fr 1fr;
-    }
-
-    .video iframe{
-        height: 300px;
-        width: 500px;
-
+        font-size: 15px;
     }
 
     
 
+
+
 }
 
 
-@media screen and (max-width: 375px){
+
+
+@media (min-width: 10px) and (max-width: 320px){
 
     .bodyIndex{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 0.1fr 1fr 0.4fr;
+        grid-template-rows: 0.2fr 0.1fr 1fr 0.4fr;
         grid-template-areas: 
         "header"
         "h1"
@@ -502,12 +524,17 @@ margin: 0px;
 
     }
 
+    p{
+        margin: 1px;
+        width: 270px;
+    }
+
     #h1Index{
         grid-area: "h1";
         margin: 0px;
         padding: 0px;
         align-self: center;
-        justify-self: center;
+        justify-self: center; 
         
     }
 
@@ -515,5 +542,52 @@ margin: 0px;
         margin: 0px;
     }
 
-}
+    .bodyHisto{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+        grid-template-areas:
+        "header"
+        "main"
+        ""
+        ""
 
+        ;
+    }
+
+    #playoffs{
+        margin-top: 15px;
+    }
+
+    #sectionIndex{
+        position: relative;
+        right: 25px;
+    }
+
+    h2{
+        align-self: left;
+
+    }
+    
+    h3{
+        position: relative;
+        right: 25px;
+        margin-bottom: 15px;
+    }
+
+
+    .footerIndx{
+        margin-left: 35px;
+    }
+
+    .navMenu{
+        
+    }
+
+
+    .
+
+
+
+
+}
