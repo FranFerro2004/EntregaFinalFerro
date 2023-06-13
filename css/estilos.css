@@ -139,6 +139,51 @@ header{
     padding: 5px;
 }
 
+.footerPosi img{
+    max-width: 100%;
+    height: 50px;
+    width: 50px;
+}
+
+.footerPosi p{
+    margin: 0px;
+}
+
+.footerPosi a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+.footerPosi li{
+    display: inline;
+    padding: 5px;
+}
+
+.footerContacto img{
+    max-width: 100%;
+    height: 50px;
+    width: 50px;
+}
+
+.footerContacto p{
+    margin: 0px;
+}
+
+.footerContacto a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+.footerContacto li{
+    display: inline;
+    padding: 5px;
+}
+
+
 
 .bloque{
     display: block;
@@ -356,6 +401,28 @@ margin: 0px;
     width: 35em;
 }
 
+#oeste{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#este{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.mainContacto{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
 
 
 /* Responsive */
@@ -417,20 +484,14 @@ margin: 0px;
 
     /* Contacto */
 
-    .bodyContacto{
-        display: grid;
-        grid-template-columns: repeat( 2, 1fr);
-        grid-template-rows: 0.3fr 1fr 0.3fr;
-        grid-template-areas: 
-        "header header"
-        "main main"
-        "footer footer"
-        ;
 
-    }
+
+    
 
     .mainContacto{
         grid-area: "main";
+        display: flex;
+        justify-content: center;
         
     }
 
@@ -444,6 +505,7 @@ margin: 0px;
 
 
 }
+
 
 
 
@@ -477,7 +539,7 @@ margin: 0px;
     .bodyHisto{
         display: grid;
         grid-template-columns: 25% 75%;
-        grid-template-rows: 0.4 100px 0.7fr 0.5fr;
+        grid-template-rows: 0.4fr 0.7fr 0.7fr 0.5fr;
         grid-template-areas: 
         "header header"
         "main main"
@@ -499,9 +561,24 @@ margin: 0px;
         font-size: 15px;
     }
 
-    
+    .video iframe{
+        height: 500px;
+        width: 700px;
+    }
 
 
+
+    /* Posiciones */
+
+    #este img{
+        height: auto;
+        width: 600px;
+    }
+
+    #oeste img{
+        height: auto;
+        width: 600px;
+    }
 
 }
 
@@ -526,7 +603,7 @@ margin: 0px;
 
     p{
         margin: 1px;
-        width: 270px;
+        width: 250px;
     }
 
     #h1Index{
@@ -549,10 +626,10 @@ margin: 0px;
         grid-template-areas:
         "header"
         "main"
-        ""
-        ""
-
+        "video"
+        "footer"
         ;
+
     }
 
     #playoffs{
@@ -566,6 +643,7 @@ margin: 0px;
 
     h2{
         align-self: left;
+        margin-bottom: 5px;
 
     }
     
@@ -580,14 +658,122 @@ margin: 0px;
         margin-left: 35px;
     }
 
-    .navMenu{
+    .footerHisto{
+        margin-left: 45px;
+        width: 300px;
+
+    }
+
+    .video{
+        width: 310px;
+        margin: 0px;
         
     }
 
+    .video iframe{
+        width: 290px;
+        height: 250px;
+        align-self: center;
+    }
 
-    .
+
+    .navMenu{
+        position: relative;
+        left: 40px;
+        bottom: 17px;
+        width: 50px;
+    }
 
 
+
+    .navMenu li{
+        padding: 5px;
+    }
+    
+
+    /* Posiciones */
+
+    .bodyPosi{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.3fr 1fr 1fr 0.5fr;
+        grid-template-areas: 
+        "header"
+        "este"
+        "oeste"
+        "footer"
+        ;
+    }
+
+    #este{
+        grid-area: "este";
+        margin-bottom: 15px;
+
+    }
+
+    #este img{
+        height: auto;
+        width: 300px;
+    }
+
+    #oeste{
+        grid-area: "oeste";
+    }
+
+    #oeste img{
+        height: auto;
+        width: 300px;
+    }
+
+    .h2Posi{
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    .footerPosi h3{
+        font-size: 15px;
+
+    }
+
+    .footerPosi p{
+        font-size: 13px;
+    }
+
+
+    .footerPosi img{
+        height: auto;
+        width: 30px;
+    }
+
+
+    .footerPosi{
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+
+
+    .bodyContacto{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.3fr 1fr 0.5fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        ;
+    }
+
+    header{
+        grid-area: "header";
+    }
+
+    .mainContacto{
+        grid-area: "main";
+    }
+
+    .footerContacto{
+        grid-area: "footer";
+    }
 
 
 }
