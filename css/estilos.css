@@ -419,7 +419,7 @@ margin: 0px;
 
 
 .mainContacto{
-    display: flex;
+    display: ;
     align-self: center;
     justify-self: center;
 }
@@ -775,5 +775,24 @@ margin: 0px;
         grid-area: "footer";
     }
 
+    .footerContacto h3{
+        font-size: 15px;
 
+    }
+
+    .footerContacto p{
+        font-size: 13px;
+    }
+
+
+    .footerContacto img{
+        height: auto;
+        width: 30px;
+    }S
+
+
+    .footerContacto{
+        margin-left: 50px;
+        margin-top: 20px;
+    }
 }
