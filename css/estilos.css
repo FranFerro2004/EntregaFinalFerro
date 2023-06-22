@@ -463,8 +463,13 @@ margin: 0px;
 
     .bodyHisto{
         display: grid;
-        grid-template-columns: 40% 60%;
-        grid-template-rows: 0.4fr 3fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.4fr 3fr;
+        grid-template-areas: 
+        "header header header"
+        "footer main main"
+        ;
+        
     }
 
     .video iframe{
@@ -483,8 +488,6 @@ margin: 0px;
     }
 
     /* Contacto */
-
-
 
     
 
