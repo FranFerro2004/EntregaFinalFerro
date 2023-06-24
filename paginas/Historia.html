@@ -10,7 +10,9 @@
     <link rel="icon" href="../imagenes/i.png">
 
 
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
@@ -18,32 +20,36 @@
     
     <header class="headerHisto">
 
-        <a href="../index.html"><img src="../imagenes/i.png" alt="" class="logoNBA"></a>
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <a href="../index.html"><img src="../imagenes/i.png" alt="" class="logoNBA"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class=" navMenu navbar-nav me-auto mb-2 mb-lg-0 ">
 
-       
+                        <li class="nav-item">
+                            <a href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../paginas/Posiciones.html">Posiciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../paginas/Fotos.html">Fotos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../paginas/Campeones.html">Campeones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../paginas/Contacto.html">Contacto</a>
+                        </li>
+                    </ul>
 
-        <nav class="navMenu">
-
-            
-            <label>
-
-                
-                <ul>
-
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="Posiciones.html">Posiciones</a></li>
-                    <li><a href="Campeones.html">Campeones</a></li>
-                    <li><a href="Fotos.html">Fotos</a></li>                                                  
-                    <li><a href="Contacto.html">Contacto</a></li> 
-
-
-                </ul>
-
-
-
-            </label>
-
-
+                </div>
+            </div>
         </nav>
 
     </header>
