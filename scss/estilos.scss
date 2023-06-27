@@ -1,7 +1,770 @@
-h2{
-    color: red;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-    color: aqua;
+main{
+    margin-left: 25px;
+
+}
+
+.logoNBA{
+    width: 150px;
+    
+}
+
+.navMenu{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+    
+    a{
+        text-decoration: none;
+        font-size: larger;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: black;
+        padding: 50px;
+
+        &:active{
+            background-color: white;
+        }
+    } 
+
+
+
+}
+
+@media (hover: hover){
+    .navMenu a:hover{
+    background-color:rgba(114, 114, 114, 0.562) ;
+    height: 50px;
+    }
+}
+
+.imgIndex{
+    background-image: url(../imagenes/curry\ jugando.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    opacity: 87%;
+    display: block;
+    margin-left: 0px;
+    
+    
+}
+
+.estiloLetra{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.pIndex{
+    li{
+        list-style: none;
+    }
+}
+
+.backColor{
+    background-color: rgba(201, 201, 201, 0.377);
+}
+
+.footerIndx{
+    margin: 25px;
+    position: relative;
+    top: 150px;    
+
+    li{
+        display: inline;
+        padding: 5px;
+        list-style: none;
+        position: relative;
+        left: 25px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    
+    }
+
+    img{
+        max-width: 100%;
+        height: 50px;
+        width: 50px;
+    
+    }
+
+    p{
+        margin: 0px;
+    }
+
+}
+
+.footerPosi img{
+    max-width: 100%;
+    height: 50px;
+    width: 50px;
+
+    p{
+        margin: 0px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    
+    }
+
+    li{
+        display: inline;
+        padding: 5px;
+    }
+
+
+}
+
+.footerContacto{ 
+
+    img{
+    max-width: 100%;
+    height: 50px;
+    width: 50px;
+
+    }
+
+    p{
+        margin: 0px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    
+    }
+
+    li{
+        display: inline;
+        padding: 5px;
+    }
+
+}
+
+.bloque{
+    display: block;
+    margin: 25px;
+
+}
+
+p{
+    margin: 25px;
+
+} 
+
+section{
+    margin: 25px;
+
+}
+
+.imgContact{
+    background-image: url(../imagenes/imagen\ dunk.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    display: block;
+    margin-left: 0px;
+    
+    
+}
+
+.imgHisto{
+    background-image: url(../imagenes/nba\ foto\ vieja.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    display: block;
+    margin-left: 0px;
+    opacity: 90%;
+
+}
+
+.bodyHisto{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 0.4fr 3fr 1fr ;
+    grid-template-areas: 
+    "header header"
+    "main video"
+    "footer footer"
+    ;
+}
+
+.headerHisto{
+    grid-area: header;
+} 
+
+.mainHisto{
+    grid-area: main;
+    padding-top: 0px;
+}
+
+.video{
+    grid-area: video;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footerHisto{
+    margin: 30px;
+    margin-left: 50px;
+
+    a{
+        text-decoration: none;
+        color: black;
+        
+    }
+
+    li{
+        list-style: none;
+        padding-left: 40px;
+        display: inline;
+        padding: 5px;
+    }
+
+    p{
+        margin: 0px;
+        
+    }
+
+    img{
+        max-width: 100%;
+        height: 50px;
+        width: 50px;
+    
+    }
+
+}   
+
+.bodyIndex{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 12em 25em 25em;
+    grid-template-areas: 
+    "header header"
+    "h1 main"
+    "footer main"
+
+    ;
+
+}
+
+.mainIndex{
+    grid-area: main;
+
+}
+
+#h1index{
+    grid-area: h1;
+
+}
+
+.footerIndx{
+    grid-area: footer;
+
+}
+
+.headerIndex{
+    grid-area: header;
+
+}
+
+.h3Index{
+    margin-left: 25px;
+}
+
+#ulIndexmain{ 
+    padding: 25px;
+    padding-left: 40px;
+}
+
+#comoeselformato{
+    padding: 25px;
+    padding-top: 20px;
+
+}
+
+.bodyFoto{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "header header"
+    "foto1 foto2"
+    "foto3 foto4"
+    "foto5 foto6"
+    "foto7 foto8"
+    "footer footer"
+    ;
+}
+
+.headerFoto{
+    grid-area: header;
+
+}
+
+
+.footerFoto{
+    grid-area: footer;
+
+}
+
+.ulFoto{
+    grid-area: fotos;
+    height: 1700px;
+    display: flex;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
+
+    img{
+        height: auto;
+        width: 35em;
+    }
+
+
+}
+
+#oeste{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#este{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.mainContacto{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+.headerPosi{
+    margin-bottom: 40px;
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+    /* Index */
+
+    .bodyIndex{
+        grid-template-columns: 100%;
+        grid-template-rows: 0.23fr 0.3fr repeat( 2, 0.5fr);
+        grid-template-areas: 
+        "header"
+        "h1"
+        "main"
+        "footer"
+        ;   
+        }
+    
+    #h1Index{
+        padding-top: 25px;
+        justify-self: center;
+            
+        }
+        
+        
+            
+            
+         /* Historia */
+
+    .navMenu{
+
+        a{
+            padding: 25px;
+    
+        }
+
+    }
+
+    .bodyHisto{
+        display: grid;
+        grid-template-columns: 0.3fr 1fr ;
+        grid-template-rows: 0.4fr 1fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "footer video"
+        ;
+        
+    }
+
+    .footerHisto{
+        margin: 0px;
+        margin-left: 80px;
+        margin-top: 80px;
+        
+    }
+
+    .video{
+
+        iframe{
+            height: 26em;
+            width: 30em;
+    
+        }
+    }
+
+/* Contacto */
+
+    
+
+.mainContacto{
+    grid-area: "main";
+    display: flex;
+    justify-content: center;
+    
+}
+
+header{
+    grid-area: "header";
+}
+
+.footerContacto{
+    grid-area: "footer";
+}
+
+
+}
+
+
+@media screen and (min-width: 521px) and (max-width: 768px){
+
+    /* Index */
+
+    .bodyIndex{
+        grid-template-columns: 100%;
+        grid-template-rows: 0.23fr 0.3fr repeat( 2, 0.5fr);
+        grid-template-areas: 
+        "header"
+        "h1"
+        "main"
+        "footer"
+        
+        ;   
+        }
+    
+        #h1Index{
+        padding-top: 50px;
+        padding-left: 40px; 
+        }
+    
+    
+        /* Historia */
+    
+    
+        .bodyHisto{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 0.4fr 0.7fr 0.7fr 0.5fr;
+            grid-template-areas: 
+            "header"
+            "main"
+            "video"
+            "footer"
+            ;
+        }
+    
+        .navMenu{
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            width: 100%;
+
+            a{
+                padding-bottom: 2px;
+            }
+
+            li{
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+
+        }
+
+        .video{
+
+            iframe{
+                height: auto;
+                width: auto;
+            }
+
+        }
+
+        /* Posiciones */
+
+        #este{
+            img{
+                height: auto;
+                width: 600px;
+            }
+
+        }
+
+        #oeste{
+            img{
+                height: auto;
+                width: 600px;
+            }
+
+        }
+        
+}
+
+
+
+
+@media (min-width: 10px) and (max-width: 520px){
+
+    .bodyIndex{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.1fr 1fr 0.4fr;
+        grid-template-areas: 
+        "header"
+        "h1"
+        "main"
+        "footer"
+        ;
+    
+    }
+
+    p{
+        margin: 1px;
+        width: 240px;
+    }
+
+    #h1Index{
+        grid-area: "h1";
+        margin: 0px;
+        padding: 0px;
+        align-self: center;
+        justify-self: center; 
+        
+    }
+
+    main {
+        margin: 0px;
+    }
+
+    .bodyHisto{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+        grid-template-areas:
+        "header"
+        "main"
+        "video"
+        "footer"
+        ;
+
+    }
+
+    .mainHisto{
+        align-self: center;
+        justify-self: center;
+    }
+
+    .video{
+        justify-self: center;
+        align-items: center;
+    }
+
+    #playoffs{
+        margin-top: 15px;
+    }
+
+    #sectionIndex{
+        position: relative;
+        right: 25px;
+    }
+
+    h2{
+        align-self: left;
+        margin-bottom: 5px;
+
+    }
+    
+    h3{
+        position: relative;
+        right: 25px;
+        margin-bottom: 15px;
+    }
+
+
+    .footerIndx{
+        margin-left: 35px;
+    }
+
+    .footerHisto{
+        margin-left: 45px;
+        width: 300px;
+
+    }
+
+    .video{
+        iframe{
+            width: 290px;
+            height: 250px;
+            align-self: center;
+        }
+    }
+
+    
+    .bodyPosi{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.3fr 1fr 1fr 0.5fr;
+        grid-template-areas: 
+        "header"
+        "este"
+        "oeste"
+        "footer"
+        ;
+    }
+
+    #este{
+        grid-area: "este";
+        margin-bottom: 15px;
+
+        img{
+            height: auto;
+            width: 300px;
+        }
+
+    }
+
+    #oeste{
+        grid-area: "oeste";
+
+        img{
+            height: auto;
+            width: 300px;
+        }
+    }
+
+    .h2Posi{
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    .footerPosi{
+        margin-left: 50px;
+        margin-top: 20px;
+
+        h3{
+            font-size: 15px;
+    
+        }
+
+        p{
+            font-size: 13px;
+        }
+
+        img{
+            height: auto;
+            width: 30px;
+        }
+    }
+
+    .bodyContacto{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.3fr 1fr 0.5fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        ;
+    }
+
+    header{
+        grid-area: "header";
+    }
+
+    .mainContacto{
+        grid-area: "main";
+    }
+
+    .footerContacto{
+        grid-area: "footer";
+        margin-left: 50px;
+        margin-top: 20px;
+
+        h3{
+            font-size: 15px;
+    
+        }
+
+        p{
+            font-size: 13px;
+        }
+
+        img{
+            height: auto;
+            width: 30px;
+        }
+
+        
+
+    }
+
+    .navMenu{
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        width: 100%;
+
+        a{
+            padding-bottom: 10px;
+        }
+
+        li{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+    }
+    
+
 }

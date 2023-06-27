@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
 }
@@ -13,9 +13,9 @@ main{
 .logoNBA{
     width: 150px;
     
-}
+} */
 
-.navMenu{
+/* .navMenu{
     justify-content: center;
     display: flex;
     width: 100%;
@@ -40,11 +40,11 @@ main{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
     padding: 50px;
-} 
+}  */
 
 
 
-@media (hover: hover){
+/* @media (hover: hover){
     .navMenu a:hover{
     color: ;
     background-color:rgba(114, 114, 114, 0.562) ;
@@ -55,12 +55,12 @@ main{
 .navMenu a:active{
     background-color: white;
 
-}
+} */
 
 
 
 
-.imgIndex{
+/* .imgIndex{
     background-image: url(../imagenes/curry\ jugando.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -70,9 +70,9 @@ main{
     margin-left: 0px;
     
     
-}
+} */
 
-.estiloLetra{
+/* .estiloLetra{
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     color: rgb(0, 0, 0);
@@ -82,10 +82,10 @@ main{
 
 .pIndex li{
     list-style: none;
-}
+} */
     
 
-.backColor{
+/* .backColor{
     background-color: rgba(201, 201, 201, 0.377);
 }
 
@@ -125,9 +125,9 @@ main{
 .footerIndx li{
     display: inline;
     padding: 5px;
-}
+} */
 
-.footerPosi img{
+/* .footerPosi img{
     max-width: 100%;
     height: 50px;
     width: 50px;
@@ -147,9 +147,9 @@ main{
 .footerPosi li{
     display: inline;
     padding: 5px;
-}
+} */
 
-.footerContacto img{
+/* .footerContacto img{
     max-width: 100%;
     height: 50px;
     width: 50px;
@@ -169,18 +169,18 @@ main{
 .footerContacto li{
     display: inline;
     padding: 5px;
-}
+} */
 
 
 
-.bloque{
+/* .bloque{
     display: block;
     margin: 25px;
 
 
-}
+} */
 
-p{
+/* p{
     margin: 25px;
 
 } 
@@ -188,11 +188,11 @@ p{
 section{
     margin: 25px;
 
-}
+} */
 
 
 
-.imgContact{
+/* .imgContact{
     background-image: url(../imagenes/imagen\ dunk.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -212,9 +212,9 @@ section{
     margin-left: 0px;
     opacity: 90%;
 
-}
+} */
 
-.bodyHisto{
+/* .bodyHisto{
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 0.4fr 3fr 1fr ;
@@ -244,11 +244,11 @@ section{
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-around;
-}
+} */
 
 
 
-.footerHisto{
+/* .footerHisto{
     margin: 30px;
     margin-left: 50px;
 }
@@ -280,10 +280,10 @@ margin: 0px;
 .footerHisto li{
     display: inline;
     padding: 5px;
-}
+} */
 
 
-.bodyIndex{
+/* .bodyIndex{
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 12em 25em 25em;
@@ -300,9 +300,9 @@ margin: 0px;
 .mainIndex{
     grid-area: main;
 
-}
+} */
 
-#h1index{
+/* #h1index{
     grid-area: h1;
 
 }
@@ -330,11 +330,11 @@ margin: 0px;
     padding: 25px;
     padding-top: 20px;
 
-}
+} */
 
 
 
-.bodyFoto{
+/* .bodyFoto{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -361,9 +361,9 @@ margin: 0px;
 .footerFoto{
     grid-area: footer;
 
-}
+} */
 
-.ulFoto{
+/* .ulFoto{
     height: 1700px;
     display: flex;
     align-content: space-evenly;
@@ -406,7 +406,7 @@ margin: 0px;
 
 .headerPosi{
     margin-bottom: 40px;
-}
+} */
 
 
 
@@ -415,7 +415,7 @@ margin: 0px;
 
 
 
-@media screen and (min-width: 769px) and (max-width: 1024px){
+/* @media screen and (min-width: 769px) and (max-width: 1024px){
 
     .bodyIndex{
         display: grid;
@@ -434,13 +434,13 @@ margin: 0px;
     justify-self: center;
     
     }
-
+ */
 
     
     
  /* Historia */
 
-    .navMenu a{
+/*  .navMenu a{
         padding: 25px;
 
     }
@@ -471,13 +471,13 @@ margin: 0px;
 
     }
 
-    
+     */
 
     /* Contacto */
 
     
 
-    .mainContacto{
+    /* .mainContacto{
         grid-area: "main";
         display: flex;
         justify-content: center;
@@ -493,16 +493,16 @@ margin: 0px;
     }
 
 
-}
+} */
 
 
 
 
-@media screen and (min-width: 521px) and (max-width: 768px){
+/* @media screen and (min-width: 521px) and (max-width: 768px){ */
 
     /* Index */
 
-    .bodyIndex{
+    /*  .bodyIndex{
     grid-template-columns: 100%;
     grid-template-rows: 0.23fr 0.3fr repeat( 2, 0.5fr);
     grid-template-areas: 
@@ -517,13 +517,13 @@ margin: 0px;
     #h1Index{
     padding-top: 50px;
     padding-left: 40px; 
-    }
+    } */
 
 
     /* Historia */
 
 
-    .bodyHisto{
+    /*    .bodyHisto{
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 0.4fr 0.7fr 0.7fr 0.5fr;
@@ -558,13 +558,13 @@ margin: 0px;
     .video iframe{
         height: auto;
         width: auto;
-    }
+    } */
 
 
 
     /* Posiciones */
 
-    #este img{
+/*     #este img{
         height: auto;
         width: 600px;
     }
@@ -576,13 +576,13 @@ margin: 0px;
 
 
 
-}
+} */
 
 
 
 
 
-@media (min-width: 10px) and (max-width: 520px){
+/* @media (min-width: 10px) and (max-width: 520px){
 
     .bodyIndex{
         display: grid;
@@ -678,13 +678,13 @@ margin: 0px;
         width: 290px;
         height: 250px;
         align-self: center;
-    }
+    } */
 
 
 
     /* Posiciones */
 
-    .bodyPosi{
+/*     .bodyPosi{
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 0.3fr 1fr 1fr 0.5fr;
@@ -779,7 +779,7 @@ margin: 0px;
     .footerContacto img{
         height: auto;
         width: 30px;
-    }S
+    }
 
 
     .footerContacto{
@@ -803,4 +803,4 @@ margin: 0px;
         justify-content: center;
         align-content: center;
     }
-}
+} */
