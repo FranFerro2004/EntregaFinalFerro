@@ -139,6 +139,8 @@ main{
 }
 
 .footerContacto{ 
+    margin-top: 25px;
+
 
     img{
     max-width: 100%;
@@ -160,7 +162,7 @@ main{
 
     li{
         display: inline;
-        padding: 5px;
+        padding: 15px;
     }
 
 }
@@ -369,16 +371,49 @@ section{
     flex-wrap: wrap;
 }
 
-
-.mainContacto{
-    display: flex;
-    align-self: center;
-    justify-self: center;
-}
-
 .headerPosi{
     margin-bottom: 40px;
 }
+
+.mainContacto{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "texto texto"
+    "img1 img2"
+    "img3 img4"
+    ;
+}
+
+.boston{
+    grid-area: "img1";
+    align-self: center;
+    justify-self: center;
+    height: 450px;
+    width: 500px;
+}
+
+.Bulls{
+    @extend .boston;
+    grid-area: "img4";
+    
+}
+
+.GoldenState{
+    @extend .boston;
+    grid-area: "img3";
+}
+
+.Lakers{
+    @extend .boston;
+    grid-area: "img2";
+}
+
+
+
+
+
 
 
 @media screen and (min-width: 769px) and (max-width: 1024px){
