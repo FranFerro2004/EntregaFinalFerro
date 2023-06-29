@@ -314,14 +314,11 @@ section{
 
 .bodyFoto{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5fr 1fr 0.5fr;
     grid-template-areas: 
     "header header"
-    "foto1 foto2"
-    "foto3 foto4"
-    "foto5 foto6"
-    "foto7 foto8"
+    "main main"
     "footer footer"
     ;
 }
@@ -331,86 +328,155 @@ section{
 
 }
 
+.mainFoto{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
 
 .footerFoto{
     grid-area: footer;
 
 }
 
-.ulFoto{
-    grid-area: fotos;
-    height: 1700px;
+
+@mixin imgsFoto{
+    height: auto;
+    width: 35em;
+    
+}
+
+#foto1{
+    grid-area: foto1;
+    @include imgsFoto
+}
+
+#foto2{
+    grid-area: foto2;
+    @include imgsFoto
+}
+
+#foto3{
+    grid-area: foto3;
+    @include imgsFoto
+}
+
+#foto4{
+    grid-area: foto4;
+    @include imgsFoto
+}
+
+#foto5{
+    grid-area: foto5;
+    @include imgsFoto
+}
+
+#foto6{
+    grid-area: foto6;
+    @include imgsFoto
+}
+
+#foto7{
+    grid-area: foto7;
+    @include imgsFoto
+}
+
+#foto8{
+    grid-area: foto8;
+    @include imgsFoto
+}
+
+
+
+    "foto1 foto2"
+    "foto3 foto4"
+    "foto5 foto6"
+    "foto7 foto8"
+
+@mixin conferencias{
     display: flex;
-    align-content: space-evenly;
-    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    list-style: none;
-
-    img{
-        height: auto;
-        width: 35em;
-    }
-
-
 }
 
 #oeste{
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+    @include conferencias
 }
 
 #este{
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+    @include conferencias
 }
 
 .headerPosi{
     margin-bottom: 40px;
 }
 
-.mainContacto{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
+
+@mixin gridBase($d, $c, $r){
+    display: $d;
+    grid-template-columns: $c;
+    grid-template-rows: $r;
+    @content
+}
+
+
+.mainCampeones{
+    @include gridBase(grid, repeat(2, 1fr),0.5fr repeat(2, 600px)){
+    grid-template-areas:
     "texto texto"
     "img1 img2"
     "img3 img4"
     ;
+    }
 }
 
-.boston{
-    grid-area: "img1";
+
+#h1Campeones{
+    grid-area: texto;
     align-self: center;
     justify-self: center;
+    font-size: 40px;
+    font-weight: 100;
+    margin-top: 45px;
+    margin-bottom: 30px;
+
+}
+
+@mixin imgsCampeones{
     height: 450px;
     width: 500px;
+    align-self: center;
+    justify-self: center;
 }
 
-.Bulls{
-    @extend .boston;
-    grid-area: "img4";
-    
+#Boston{
+    @include imgsCampeones;
+    grid-area: img1;
 }
 
-.GoldenState{
-    @extend .boston;
-    grid-area: "img3";
+#Bulls{
+    @include imgsCampeones;
+    grid-area: img4;
 }
 
-.Lakers{
-    @extend .boston;
-    grid-area: "img2";
+#GoldenState{
+    @include imgsCampeones;
+    grid-area: img3;
+}
+#Lakers{
+    @include imgsCampeones;
+    grid-area: img2;
 }
 
+.mainContacto{
+    display: flex;
+    align-content: center;
+    justify-content: center;
 
+}
 
 
 
@@ -760,6 +826,7 @@ header{
     .mainContacto{
         grid-area: "main";
     }
+
 
     .footerContacto{
         grid-area: "footer";
