@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+@mixin gridBase($d, $c, $r){
+    display: $d;
+    grid-template-columns: $c;
+    grid-template-rows: $r;
+    @content
+}
+
 main{
     margin-left: 25px;
 
@@ -315,7 +322,7 @@ section{
 .bodyFoto{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.15fr 1fr 0.1fr;
     grid-template-areas: 
     "header header"
     "main main"
@@ -328,24 +335,33 @@ section{
 
 }
 
-.mainFoto{
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-}
-
 .footerFoto{
     grid-area: footer;
 
 }
 
+.mainFoto{
+    grid-area: main;
+    @include gridBase(grid, repeat(2, 1fr), 0.3fr repeat(3, 1fr) 1fr){
+    grid-template-areas:
+    "h2 h2"
+    "foto1 foto2"
+    "foto3 foto4"
+    "foto5 foto6"
+    "foto7 foto8"
+    ;
+    }
+}
+
+
 
 @mixin imgsFoto{
     height: auto;
     width: 35em;
-    
+    align-self: center;
+    justify-self: center;
 }
+
 
 #foto1{
     grid-area: foto1;
@@ -387,12 +403,19 @@ section{
     @include imgsFoto
 }
 
-
-
-    "foto1 foto2"
-    "foto3 foto4"
-    "foto5 foto6"
-    "foto7 foto8"
+#h2Stickyfoto{
+    grid-area: h2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    position: sticky;
+    top: 5px;
+    background-color: rgb(219, 102, 6);
+    color: black;
+    height: 50px;
+    
+}
 
 @mixin conferencias{
     display: flex;
@@ -413,15 +436,6 @@ section{
 .headerPosi{
     margin-bottom: 40px;
 }
-
-
-@mixin gridBase($d, $c, $r){
-    display: $d;
-    grid-template-columns: $c;
-    grid-template-rows: $r;
-    @content
-}
-
 
 .mainCampeones{
     @include gridBase(grid, repeat(2, 1fr),0.5fr repeat(2, 600px)){
@@ -477,6 +491,38 @@ section{
     justify-content: center;
 
 }
+
+.footerCampeones{
+    margin: 30px;
+    margin-left: 50px;
+
+    a{
+        text-decoration: none;
+        color: black;
+        
+    }
+
+    li{
+        list-style: none;
+        padding-left: 40px;
+        display: inline;
+        padding: 5px;
+    }
+
+    p{
+        margin: 0px;
+        
+    }
+
+    img{
+        max-width: 100%;
+        height: 50px;
+        width: 50px;
+    
+    }
+
+}   
+
 
 
 
@@ -564,6 +610,55 @@ header{
     grid-area: "footer";
 }
 
+/* Fotos */
+
+
+@mixin imgsFoto{
+    height: auto;
+    width: 30em;
+    align-self: center;
+    justify-self: center;
+}
+
+#foto1{
+    grid-area: foto1;
+    @include imgsFoto
+}
+        
+#foto2{
+    grid-area: foto2;
+    @include imgsFoto
+}
+        
+#foto3{
+    grid-area: foto3;
+    @include imgsFoto
+}
+        
+#foto4{
+    grid-area: foto4;
+    @include imgsFoto
+}
+        
+#foto5{
+    grid-area: foto5;
+    @include imgsFoto
+}
+        
+#foto6{
+    grid-area: foto6;
+    @include imgsFoto
+}
+        
+#foto7{
+    grid-area: foto7;
+    @include imgsFoto
+}
+        
+#foto8{
+    grid-area: foto8;
+    @include imgsFoto
+}
 
 }
 
@@ -572,84 +667,217 @@ header{
 
     /* Index */
 
-    .bodyIndex{
-        grid-template-columns: 100%;
-        grid-template-rows: 0.23fr 0.3fr repeat( 2, 0.5fr);
-        grid-template-areas: 
-        "header"
-        "h1"
-        "main"
-        "footer"
-        
-        ;   
-        }
-    
-        #h1Index{
-        padding-top: 50px;
-        padding-left: 40px; 
-        }
-    
-    
-        /* Historia */
+.bodyIndex{
+    grid-template-columns: 100%;
+    grid-template-rows: 0.23fr 0.3fr repeat( 2, 0.5fr);
+    grid-template-areas: 
+    "header"
+    "h1"
+    "main"
+    "footer"
+    ;   
+}
+
+#h1Index{
+padding-top: 50px;
+padding-left: 40px; 
+}
     
     
-        .bodyHisto{
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 0.4fr 0.7fr 0.7fr 0.5fr;
-            grid-template-areas: 
-            "header"
-            "main"
-            "video"
-            "footer"
-            ;
-        }
+    /* Historia */
     
-        .navMenu{
-            display: flex;
-            align-items: end;
-            justify-content: end;
-            width: 100%;
+    
+.bodyHisto{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.4fr 0.7fr 0.7fr 0.5fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "video"
+    "footer"
+    ;
+}
 
-            a{
-                padding-bottom: 2px;
-            }
+.navMenu{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
 
-            li{
-                display: flex;
-                justify-content: center;
-                align-content: center;
-            }
+    a{
+        padding-bottom: 2px;
+    }
 
-        }
+    li{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
 
-        .video{
+.video{
+    iframe{
+        height: auto;
+        width: auto;
+    }
 
-            iframe{
-                height: auto;
-                width: auto;
-            }
-
-        }
+}
 
         /* Posiciones */
 
-        #este{
-            img{
-                height: auto;
-                width: 600px;
-            }
+#este{
+    img{
+        height: auto;
+        width: 600px;
+    }
 
-        }
+}
 
-        #oeste{
-            img{
-                height: auto;
-                width: 600px;
-            }
+#oeste{
+    img{
+        height: auto;
+        width: 600px;
+    }
 
-        }
+}
         
+        /* Fotos */
+
+.bodyFoto{
+    @include gridBase(grid, 1fr, 220px 1fr 30px){
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        ;
+    }
+
+}
+
+.mainFoto{
+    @include gridBase(grid, 1fr, 0.3fr repeat(7, 1fr) 1.3fr){
+        grid-template-areas:
+        "h2"
+        "foto1"
+        "foto2"
+        "foto3"
+        "foto4"
+        "foto5"
+        "foto6"
+        "foto7"
+        "foto8"
+        ;
+    }
+}   
+
+@mixin imgsFoto{
+    height: auto;
+    width: 41em;
+    align-self: center;
+    justify-self: center;
+}
+
+#foto1{
+    grid-area: foto1;
+    @include imgsFoto
+}
+        
+#foto2{
+    grid-area: foto2;
+    @include imgsFoto
+}
+        
+#foto3{
+    grid-area: foto3;
+    @include imgsFoto
+}
+        
+#foto4{
+    grid-area: foto4;
+    @include imgsFoto
+}
+        
+#foto5{
+    grid-area: foto5;
+    @include imgsFoto
+}
+        
+#foto6{
+    grid-area: foto6;
+    @include imgsFoto
+}
+        
+#foto7{
+    grid-area: foto7;
+    @include imgsFoto
+}
+        
+#foto8{
+    grid-area: foto8;
+    @include imgsFoto
+}
+
+        /* Campeones */
+
+.bodyCampeones{
+    @include gridBase(grid, 1fr, 0.2fr 1600px 1fr){
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        ;
+
+    }
+}
+
+.mainCampeones{
+    grid-area: main;
+}
+
+.footerCampeones{
+    grid-area: footer;
+}
+
+.mainCampeones{
+    @include gridBase(grid, 1fr, 0.3fr repeat(4, 1fr)){
+        grid-template-areas: 
+        "texto"
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        ;
+    }
+}
+
+@mixin imgsCampeones{
+    height: 250px;
+    width: 350px;
+    align-self: center;
+    justify-self: center;
+}
+
+#Boston{
+    @include imgsCampeones;
+    grid-area: img1;
+}
+
+#Bulls{
+    @include imgsCampeones;
+    grid-area: img4;
+}
+
+#GoldenState{
+    @include imgsCampeones;
+    grid-area: img3;
+}
+#Lakers{
+    @include imgsCampeones;
+    grid-area: img2;
+}
+
+
 }
 
 
@@ -868,5 +1096,153 @@ header{
         }
     }
     
+
+    /* Fotos */
+
+    .bodyFoto{
+        @include gridBase(grid, 1fr, 0.14fr 1fr 30px){
+            grid-template-areas: 
+            "header"
+            "main"
+            "footer"
+            ;
+
+        }
+
+    }
+
+    .mainFoto{
+        @include gridBase(grid, 1fr, 0.3fr repeat(7, 1fr) 1.3fr){
+            grid-template-areas:
+            "h2"
+            "foto1"
+            "foto2"
+            "foto3"
+            "foto4"
+            "foto5"
+            "foto6"
+            "foto7"
+            "foto8"
+            ;
+        }
+    }   
+
+    @mixin imgsFoto{
+        height: auto;
+        width: 27em;
+        align-self: center;
+        justify-self: center;
+    }
+
+    #foto1{
+        grid-area: foto1;
+        @include imgsFoto
+    }
+    
+    #foto2{
+        grid-area: foto2;
+        @include imgsFoto
+    }
+    
+    #foto3{
+        grid-area: foto3;
+        @include imgsFoto
+    }
+    
+    #foto4{
+        grid-area: foto4;
+        @include imgsFoto
+    }
+    
+    #foto5{
+        grid-area: foto5;
+        @include imgsFoto
+    }
+    
+    #foto6{
+        grid-area: foto6;
+        @include imgsFoto
+    }
+    
+    #foto7{
+        grid-area: foto7;
+        @include imgsFoto
+    }
+    
+    #foto8{
+        grid-area: foto8;
+        @include imgsFoto
+    }
+
+
+    /* Campeones */
+
+.bodyCampeones{
+    @include gridBase(grid, 1fr, 0.2fr 1600px 1fr){
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        ;
+
+    }
+}
+
+.mainCampeones{
+    grid-area: main;
+}
+
+.footerCampeones{
+    grid-area: footer;
+}
+
+.mainCampeones{
+    @include gridBase(grid, 1fr, 0.3fr repeat(4, 1fr)){
+        grid-template-areas: 
+        "texto"
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        ;
+    }
+}
+
+@mixin imgsCampeones{
+    height: auto;
+    width: 280px;
+    align-self: center;
+    justify-self: center;
+}
+
+#Boston{
+    @include imgsCampeones;
+    grid-area: img1;
+}
+
+#Bulls{
+    @include imgsCampeones;
+    grid-area: img4;
+}
+
+#GoldenState{
+    @include imgsCampeones;
+    grid-area: img3;
+}
+#Lakers{
+    @include imgsCampeones;
+    grid-area: img2;
+}
+
+#h1Campeones{
+    font-size: 25px;
+    font-weight: 100;
+    margin-left: 25px;
+}
+
+#h2Stickyfoto{
+    text-align: justify;
+    height: 85px;
+}
 
 }
