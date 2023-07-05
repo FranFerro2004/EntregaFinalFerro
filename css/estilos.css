@@ -42,16 +42,6 @@ main {
     height: 50px;
   }
 }
-.imgIndex {
-  background-image: url(../imagenes/curry\ jugando.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 1000px;
-  opacity: 87%;
-  display: block;
-  margin-left: 0px;
-}
-
 .estiloLetra {
   font-family: Arial, Helvetica, sans-serif;
   font-size: large;
@@ -65,32 +55,6 @@ main {
 
 .backColor {
   background-color: rgba(201, 201, 201, 0.377);
-}
-
-.footerIndx {
-  margin: 25px;
-  position: relative;
-  top: 150px;
-}
-.footerIndx li {
-  display: inline;
-  padding: 5px;
-  list-style: none;
-  position: relative;
-  left: 25px;
-}
-.footerIndx a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-.footerIndx img {
-  max-width: 100%;
-  height: 50px;
-  width: 50px;
-}
-.footerIndx p {
-  margin: 0px;
 }
 
 .footerPosi img {
@@ -154,17 +118,13 @@ section {
   margin-left: 0px;
 }
 
-.imgHisto {
+.bodyHisto {
   background-image: url(../imagenes/nba\ foto\ vieja.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 800px;
-  display: block;
   margin-left: 0px;
   opacity: 90%;
-}
-
-.bodyHisto {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 0.4fr 3fr 1fr;
@@ -173,11 +133,18 @@ section {
 
 .headerHisto {
   grid-area: header;
+  background-color: white;
 }
 
 .mainHisto {
+  background-color: grey;
   grid-area: main;
   padding-top: 0px;
+  margin-top: 90px;
+}
+
+.h2histo {
+  color: white;
 }
 
 .video {
@@ -190,7 +157,8 @@ section {
 
 .footerHisto {
   margin: 30px;
-  margin-left: 50px;
+  background-color: gray;
+  padding: 15px;
 }
 .footerHisto a {
   text-decoration: none;
@@ -212,6 +180,13 @@ section {
 }
 
 .bodyIndex {
+  background-image: url(../imagenes/curry\ jugando.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1000px;
+  opacity: 87%;
+  display: block;
+  margin-left: 0px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 12em 25em 25em;
@@ -220,6 +195,10 @@ section {
 
 .mainIndex {
   grid-area: main;
+  background-color: white;
+  border-radius: 12px;
+  height: 845px;
+  width: 1230px;
 }
 
 #h1index {
@@ -228,10 +207,47 @@ section {
 
 .footerIndx {
   grid-area: footer;
+  margin: 25px;
+  position: relative;
+  top: 150px;
+  background-color: white;
+  height: 156px;
+  border-radius: 60px;
+}
+.footerIndx li {
+  display: inline;
+  padding: 5px;
+  list-style: none;
+  position: relative;
+  left: 331px;
+}
+.footerIndx a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.footerIndx img {
+  max-width: 100%;
+  height: 50px;
+  width: 50px;
+}
+.footerIndx p {
+  margin: 0px;
+  padding-left: 25px;
+}
+.footerIndx h3 {
+  position: relative;
+  top: 42px;
+  left: 78px;
 }
 
 .headerIndex {
   grid-area: header;
+  background-color: black;
+  height: 165px;
+}
+.headerIndex a {
+  color: white;
 }
 
 .h3Index {
