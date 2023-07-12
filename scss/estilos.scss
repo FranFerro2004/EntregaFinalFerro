@@ -370,7 +370,7 @@ section{
     h3{
         grid-area: h3;
         align-self: center;
-        justify-self: center;
+        justify-self: right;
     }
 
 }
@@ -606,10 +606,8 @@ section{
 
 
 
-@media screen and (min-width: 1025px) and (max-width: 1850px){
-    .bodyIndex{
-        background-image: none;
-    }
+@media screen and (min-width: 1431px) and (max-width: 1850px){
+
 
     .bodyHisto{
         background-image: none;
@@ -627,6 +625,10 @@ section{
         margin: 0px;
     }
 
+    .h2histo{
+        color: black;
+    }
+
     .video{
         
         iframe{
@@ -636,17 +638,26 @@ section{
 
     }
 
-    .h2histo{
-        color: black;
+    .bodyIndex{
+        background-image: none;
     }
+
+    .footerIndx{
+
+        h3{
+            padding-left: 35px;
+        }
+
+    }
+
+    
 
     .mainIndex{
         overflow: initial;
     }
 }
 
-
-@media screen and (min-width: 769px) and (max-width: 1024px){
+@media screen and (min-width: 1025px) and (max-width: 1430px){
 
     /* Index */
 
@@ -678,46 +689,141 @@ section{
     main{
         margin-left: 0px;
     }
-    
-    /* Historia */
+
+    .footerIndx{
+
+        h3{
+            justify-self: center;
+        }
+
+    }
 
     .navMenu{
 
         a{
-            padding: 25px;
-    
+            padding: 35px;
         }
 
     }
+
+    /* Histo */
 
     .bodyHisto{
         background-image: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-        grid-template-rows: 0.4fr 1fr 1fr;
-        grid-template-areas: 
-        "header header"
-        "main main"
-        "footer video"
-        ;
-        
+        @include gridBase(grid, 1fr, 0.3fr repeat(2, 1fr) 0.3fr){
+            grid-template-areas: 
+            "header"
+            "main"
+            "video"
+            "footer"
+            ;
+        }
     }
 
-    .footerHisto{
+    .mainHisto{
         margin: 0px;
-        margin-left: 80px;
-        margin-top: 80px;
+    }
+
+    .h2histo{
+        color: black;
+    }
+    
+    .video{
+        h2{
+            color: black;
+        }
+
+        iframe{
+            height: 450px;
+            width: 900px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 856px) and (max-width: 1024px){
+
+    /* Index */
+
+    .bodyIndex{
+        background-image: none;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.23fr 0.3fr repeat( 2, 0.5fr);
+        grid-template-areas: 
+        "header"
+        "h1"
+        "main"
+        "footer"
+        ;   
+    }
+    
+
+    .mainIndex{
+        height: auto;
+        width: auto;
+        overflow: initial;
+    }
+
+    #h1Index{
+        padding-top: 25px;
+        justify-self: center;
         
+    }
+    
+    main{
+        margin-left: 0px;
+    }
+
+    .navMenu{
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        width: 100%;
+    
+        a{
+            padding: 40px;
+            padding-bottom: 10px;
+        }
+    
+        li{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+    }
+    
+    /* Historia */
+
+    .bodyHisto{
+        background-image: none;
+        @include gridBase(grid, 1fr, 0.3fr repeat(2, 1fr) 0.3fr){
+            grid-template-areas: 
+            "header"
+            "main"
+            "video"
+            "footer"
+            ;
+        }
+    }
+
+    .mainHisto{
+        margin: 0px;
+    }
+
+    .h2histo{
+        color: black;
     }
 
     .video{
-
         iframe{
-            height: 26em;
-            width: 30em;
-    
+            height: 350px;
+            width: 700px;
         }
+
     }
+    
+
+    
 
 
 /* Contacto */
@@ -732,11 +838,11 @@ section{
 }
 
 header{
-    grid-area: "header";
+    grid-area: header;
 }
 
 .footerContacto{
-    grid-area: "footer";
+    grid-area: footer;
 }
 
 /* Fotos */
@@ -791,12 +897,91 @@ header{
 
 }
 
+@media screen and (min-width: 769px) and (max-width: 855px){
+
+    .bodyIndex{
+        background-image: none;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.23fr 0.3fr repeat( 2, 0.5fr);
+        grid-template-areas: 
+        "header"
+        "h1"
+        "main"
+        "footer"
+        ;   
+    }
+
+    .mainIndex{
+        height: auto;
+        width: auto;
+        overflow: initial;
+    }
+
+    #h1Index{
+        padding-top: 25px;
+        justify-self: center;
+        
+    }
+    
+    main{
+        margin-left: 0px;
+    }
+
+    .navMenu{
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        width: 100%;
+    
+        a{
+            padding-bottom: 2px;
+        }
+    
+        li{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+    }
+
+    /* Historia */
+
+    .bodyHisto{
+        background-image: none;
+        @include gridBase(grid, 1fr, 0.3fr repeat(2, 1fr) 0.3fr){
+            grid-template-areas: 
+            "header"
+            "main"
+            "video"
+            "footer"
+            ;
+        }
+    }
+
+    .mainHisto{
+        margin: 0px;
+    }
+
+    .h2histo{
+        color: black;
+    }
+
+    .video{
+        iframe{
+            height: 350px;
+            width: 700px;
+        }
+
+    }
+
+}
 
 @media screen and (min-width: 521px) and (max-width: 768px){
 
     /* Index */
 
 .bodyIndex{
+    background-image: none;
     grid-template-columns: 100%;
     grid-template-rows: 0.23fr 0.3fr repeat( 2, 0.5fr);
     grid-template-areas: 
@@ -811,7 +996,13 @@ header{
 padding-top: 50px;
 padding-left: 40px; 
 }
-    
+
+.mainIndex{
+    height: auto;
+    width: auto;
+    overflow: initial;
+}
+
     
     /* Historia */
     
@@ -1015,6 +1206,7 @@ padding-left: 40px;
 @media (min-width: 10px) and (max-width: 520px){
 
     .bodyIndex{
+        background-image: none;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 0.2fr 0.1fr 1fr 0.4fr;
@@ -1027,9 +1219,15 @@ padding-left: 40px;
     
     }
 
+    .mainIndex{
+        height: auto;
+        width: auto;
+        overflow: initial;
+    }
+
     p{
         margin: 1px;
-        width: 240px;
+        width: auto;
     }
 
     #h1Index{
