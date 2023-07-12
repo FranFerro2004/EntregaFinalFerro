@@ -79,13 +79,22 @@ main{
 }
 
 
-.footerPosi img{
-    max-width: 100%;
-    height: 50px;
-    width: 50px;
+.footerPosi{
 
-    p{
-        margin: 0px;
+    grid-area: footer;
+    margin-top: 45px;    
+    background-color: gray;
+    height: 155px;
+    border-radius: 60px;
+
+    li{
+        display: inline;
+        padding: 5px;
+        list-style: none;
+        position: relative;
+        left: 1064px;
+        bottom: 6px;
+
     }
 
     a{
@@ -95,11 +104,23 @@ main{
     
     }
 
-    li{
-        display: inline;
-        padding: 5px;
+    img{
+        max-width: 100%;
+        height: 50px;
+        width: 50px;
+    
     }
 
+    p{
+        margin: 0px;
+        padding-left: 685px;
+    }
+
+    h3{
+        position: relative;
+        top: 42px;
+        left: 650px;
+    }
 
 }
 
@@ -203,26 +224,25 @@ section{
 }
 
 .footerHisto{
-    margin: 30px;
+
+    grid-area: footer;
+    position: relative;
+    top: 20px;    
     background-color: gray;
-    padding: 15px;
-
-    a{
-        text-decoration: none;
-        color: black;
-        
+    height: 155px;
+    border-radius: 60px;
+    @include gridBase(grid, repeat( 2, 1fr), repeat( 2, 1fr)){
+        grid-template-areas: 
+        "h3 logos"
+        "p      p"
+        ;
     }
 
-    li{
-        list-style: none;
-        padding-left: 40px;
-        display: inline;
-        padding: 5px;
-    }
 
     p{
-        margin: 0px;
-        
+        grid-area: p;
+        justify-self: center;
+        align-self: center;
     }
 
     img{
@@ -230,6 +250,36 @@ section{
         height: 50px;
         width: 50px;
     
+    }
+
+    li{
+        list-style: none;
+        
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    
+    }
+
+    ul{
+        grid-area: logos;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        position: relative;
+        top: 25px;
+        right: 60px;
+    }
+
+    h3{
+        grid-area: h3;
+        align-self: center;
+        justify-self: center;
+        padding-top: 15px;
     }
 
 }   
@@ -258,8 +308,9 @@ section{
     background-color: white;
     border-radius: 12px;
     height: 845px;
-    width: 1230px;
-
+    width: 1100px;
+    justify-self: right;
+    overflow: overlay;
 } 
 
 #h1index{
@@ -269,27 +320,22 @@ section{
 
 .footerIndx{
     grid-area: footer;
-    margin: 25px;
     position: relative;
     top: 150px;    
     background-color: white;
     height: 156px;
     border-radius: 60px;
-
-    li{
-        display: inline;
-        padding: 5px;
-        list-style: none;
-        position: relative;
-        left: 331px;
-
+    @include gridBase(grid, repeat( 2, 1fr), repeat( 2, 1fr)){
+        grid-template-areas: 
+        "h3 logos"
+        "p      p"
+        ;
     }
 
-    a{
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-    
+
+    p{
+        grid-area: p;
+        justify-self: center;
     }
 
     img{
@@ -299,15 +345,32 @@ section{
     
     }
 
-    p{
-        margin: 0px;
-        padding-left: 25px;
+    li{
+        list-style: none;
+        
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    
+    }
+
+    ul{
+        grid-area: logos;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 25px;
+        padding-right: 60px;
     }
 
     h3{
-        position: relative;
-        top: 42px;
-        left: 78px;
+        grid-area: h3;
+        align-self: center;
+        justify-self: center;
     }
 
 }
@@ -543,7 +606,44 @@ section{
 
 
 
+@media screen and (min-width: 1025px) and (max-width: 1850px){
+    .bodyIndex{
+        background-image: none;
+    }
 
+    .bodyHisto{
+        background-image: none;
+        @include gridBase(grid, 1fr, 0.3fr repeat(2, 1fr) 0.3fr){
+            grid-template-areas: 
+            "header"
+            "main"
+            "video"
+            "footer"
+            ;
+        }
+    }
+
+    .mainHisto{
+        margin: 0px;
+    }
+
+    .video{
+        
+        iframe{
+            height: 400px;
+            width: 850px;
+        }
+
+    }
+
+    .h2histo{
+        color: black;
+    }
+
+    .mainIndex{
+        overflow: initial;
+    }
+}
 
 
 @media screen and (min-width: 769px) and (max-width: 1024px){
@@ -551,6 +651,7 @@ section{
     /* Index */
 
     .bodyIndex{
+        background-image: none;
         grid-template-columns: 100%;
         grid-template-rows: 0.23fr 0.3fr repeat( 2, 0.5fr);
         grid-template-areas: 
@@ -559,18 +660,26 @@ section{
         "main"
         "footer"
         ;   
-        }
+    }
     
+
+    .mainIndex{
+        height: auto;
+        width: auto;
+        overflow: initial;
+    }
+
     #h1Index{
         padding-top: 25px;
         justify-self: center;
-            
-        }
         
-        
-            
-            
-         /* Historia */
+    }
+    
+    main{
+        margin-left: 0px;
+    }
+    
+    /* Historia */
 
     .navMenu{
 
@@ -582,8 +691,9 @@ section{
     }
 
     .bodyHisto{
+        background-image: none;
         display: grid;
-        grid-template-columns: 0.3fr 1fr ;
+        grid-template-columns: 1fr 1fr ;
         grid-template-rows: 0.4fr 1fr 1fr;
         grid-template-areas: 
         "header header"
