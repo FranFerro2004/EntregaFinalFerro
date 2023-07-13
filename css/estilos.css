@@ -506,32 +506,32 @@ section {
 }
 
 #Boston {
-  height: 450px;
-  width: 500px;
+  height: auto;
+  width: 400px;
   align-self: center;
   justify-self: center;
   grid-area: img1;
 }
 
 #Bulls {
-  height: 450px;
-  width: 500px;
+  height: auto;
+  width: 400px;
   align-self: center;
   justify-self: center;
   grid-area: img4;
 }
 
 #GoldenState {
-  height: 450px;
-  width: 500px;
+  height: auto;
+  width: 400px;
   align-self: center;
   justify-self: center;
   grid-area: img3;
 }
 
 #Lakers {
-  height: 450px;
-  width: 500px;
+  height: auto;
+  width: 400px;
   align-self: center;
   justify-self: center;
   grid-area: img2;
@@ -720,6 +720,12 @@ section {
     grid-area: footer;
   }
   /* Fotos */
+  .mainFoto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr repeat(7, 1fr) 1.3fr;
+    grid-template-areas: "h2" "foto1" "foto2" "foto3" "foto4" "foto5" "foto6" "foto7" "foto8";
+  }
   #foto1 {
     grid-area: foto1;
     height: auto;
@@ -833,6 +839,79 @@ section {
   .video iframe {
     height: 350px;
     width: 700px;
+  }
+  /* Fotos */
+  .headerFoto {
+    height: auto;
+  }
+  .bodyFoto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px 1fr 30px;
+    grid-template-areas: "header" "main" "footer";
+  }
+  .mainFoto {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr repeat(7, 1fr) 1.3fr;
+    grid-template-areas: "h2" "foto1" "foto2" "foto3" "foto4" "foto5" "foto6" "foto7" "foto8";
+  }
+  #foto1 {
+    grid-area: foto1;
+    height: auto;
+    width: 41em;
+    align-self: center;
+    justify-self: center;
+  }
+  #foto2 {
+    grid-area: foto2;
+    height: auto;
+    width: 41em;
+    align-self: center;
+    justify-self: center;
+  }
+  #foto3 {
+    grid-area: foto3;
+    height: auto;
+    width: 41em;
+    align-self: center;
+    justify-self: center;
+  }
+  #foto4 {
+    grid-area: foto4;
+    height: auto;
+    width: 41em;
+    align-self: center;
+    justify-self: center;
+  }
+  #foto5 {
+    grid-area: foto5;
+    height: auto;
+    width: 41em;
+    align-self: center;
+    justify-self: center;
+  }
+  #foto6 {
+    grid-area: foto6;
+    height: auto;
+    width: 41em;
+    align-self: center;
+    justify-self: center;
+  }
+  #foto7 {
+    grid-area: foto7;
+    height: auto;
+    width: 41em;
+    align-self: center;
+    justify-self: center;
+  }
+  #foto8 {
+    grid-area: foto8;
+    height: auto;
+    width: 41em;
+    align-self: center;
+    justify-self: center;
   }
 }
 @media screen and (min-width: 521px) and (max-width: 768px) {
@@ -982,28 +1061,28 @@ section {
     grid-template-areas: "texto" "img1" "img2" "img3" "img4";
   }
   #Boston {
-    height: 250px;
+    height: auto;
     width: 350px;
     align-self: center;
     justify-self: center;
     grid-area: img1;
   }
   #Bulls {
-    height: 250px;
+    height: auto;
     width: 350px;
     align-self: center;
     justify-self: center;
     grid-area: img4;
   }
   #GoldenState {
-    height: 250px;
+    height: auto;
     width: 350px;
     align-self: center;
     justify-self: center;
     grid-area: img3;
   }
   #Lakers {
-    height: 250px;
+    height: auto;
     width: 350px;
     align-self: center;
     justify-self: center;

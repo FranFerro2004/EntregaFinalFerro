@@ -430,6 +430,7 @@ section{
 .headerFoto{
     grid-area: header;
 
+
 }
 
 .footerFoto{
@@ -611,8 +612,8 @@ section{
 }
 
 @mixin imgsCampeones{
-    height: 450px;
-    width: 500px;
+    height: auto;
+    width: 400px;
     align-self: center;
     justify-self: center;
 }
@@ -931,6 +932,21 @@ header{
 
 /* Fotos */
 
+.mainFoto{
+    @include gridBase(grid, 1fr, 0.3fr repeat(7, 1fr) 1.3fr){
+        grid-template-areas:
+        "h2"
+        "foto1"
+        "foto2"
+        "foto3"
+        "foto4"
+        "foto5"
+        "foto6"
+        "foto7"
+        "foto8"
+        ;
+    }
+}  
 
 @mixin imgsFoto{
     height: auto;
@@ -1066,7 +1082,94 @@ header{
 
     }
 
+    /* Fotos */
+
+    
+
+    .headerFoto{
+        height: auto;
+    }
+
+    .bodyFoto{
+        @include gridBase(grid, 1fr, 220px 1fr 30px){
+            grid-template-areas: 
+            "header"
+            "main"
+            "footer"
+            ;
+        }
+    
+    }
+    
+    .mainFoto{
+        grid-area: main;
+        @include gridBase(grid, 1fr, 0.3fr repeat(7, 1fr) 1.3fr){
+            grid-template-areas:
+            "h2"
+            "foto1"
+            "foto2"
+            "foto3"
+            "foto4"
+            "foto5"
+            "foto6"
+            "foto7"
+            "foto8"
+            ;
+        }
+    }   
+    
+    @mixin imgsFoto{
+        height: auto;
+        width: 41em;
+        align-self: center;
+        justify-self: center;
+    }
+
+    #foto1{
+        grid-area: foto1;
+        @include imgsFoto
+    }
+            
+    #foto2{
+        grid-area: foto2;
+        @include imgsFoto
+    }
+            
+    #foto3{
+        grid-area: foto3;
+        @include imgsFoto
+    }
+            
+    #foto4{
+        grid-area: foto4;
+        @include imgsFoto
+    }
+            
+    #foto5{
+        grid-area: foto5;
+        @include imgsFoto
+    }
+            
+    #foto6{
+        grid-area: foto6;
+        @include imgsFoto
+    }
+            
+    #foto7{
+        grid-area: foto7;
+        @include imgsFoto
+    }
+            
+    #foto8{
+        grid-area: foto8;
+        @include imgsFoto
+    }
+    
+    
+
 }
+
+
 
 @media screen and (min-width: 521px) and (max-width: 768px){
 
@@ -1272,7 +1375,7 @@ padding-left: 40px;
 }
 
 @mixin imgsCampeones{
-    height: 250px;
+    height: auto;
     width: 350px;
     align-self: center;
     justify-self: center;
