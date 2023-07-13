@@ -59,37 +59,49 @@ main {
 
 .footerPosi {
   grid-area: footer;
-  margin-top: 45px;
+  position: relative;
+  top: 20px;
   background-color: gray;
   height: 155px;
   border-radius: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "h3 logos" "p      p";
 }
-.footerPosi li {
-  display: inline;
-  padding: 5px;
-  list-style: none;
-  position: relative;
-  left: 1064px;
-  bottom: 6px;
-}
-.footerPosi a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
+.footerPosi p {
+  grid-area: p;
+  justify-self: center;
+  align-self: center;
 }
 .footerPosi img {
   max-width: 100%;
   height: 50px;
   width: 50px;
 }
-.footerPosi p {
-  margin: 0px;
-  padding-left: 685px;
+.footerPosi li {
+  list-style: none;
+}
+.footerPosi a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.footerPosi ul {
+  grid-area: logos;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: relative;
+  top: 25px;
+  right: 60px;
 }
 .footerPosi h3 {
-  position: relative;
-  top: 42px;
-  left: 650px;
+  grid-area: h3;
+  align-self: center;
+  justify-self: center;
+  padding-top: 15px;
 }
 
 .footerContacto {
@@ -327,6 +339,48 @@ section {
 
 .footerFoto {
   grid-area: footer;
+  position: relative;
+  top: 20px;
+  height: 155px;
+  border-radius: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "h3 logos" "p      p";
+}
+.footerFoto p {
+  grid-area: p;
+  justify-self: center;
+  align-self: center;
+}
+.footerFoto img {
+  max-width: 100%;
+  height: 50px;
+  width: 50px;
+}
+.footerFoto li {
+  list-style: none;
+}
+.footerFoto a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.footerFoto ul {
+  grid-area: logos;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: relative;
+  top: 25px;
+  right: 60px;
+}
+.footerFoto h3 {
+  grid-area: h3;
+  align-self: center;
+  justify-self: center;
+  padding-top: 15px;
 }
 
 .mainFoto {
@@ -539,6 +593,9 @@ section {
   .mainIndex {
     overflow: initial;
   }
+  .headerIndex {
+    height: auto;
+  }
 }
 @media screen and (min-width: 1025px) and (max-width: 1430px) {
   /* Index */
@@ -565,6 +622,9 @@ section {
   }
   .navMenu a {
     padding: 35px;
+  }
+  .headerIndex {
+    height: auto;
   }
   /* Histo */
   .bodyHisto {
@@ -623,6 +683,9 @@ section {
     justify-content: center;
     align-content: center;
   }
+  .headerIndex {
+    height: auto;
+  }
   /* Historia */
   .bodyHisto {
     background-image: none;
@@ -640,6 +703,9 @@ section {
   .video iframe {
     height: 350px;
     width: 700px;
+  }
+  p {
+    font-size: 25px;
   }
   /* Contacto */
   .mainContacto {
@@ -737,12 +803,18 @@ section {
     width: 100%;
   }
   .navMenu a {
-    padding-bottom: 2px;
+    padding: 25px;
   }
   .navMenu li {
     display: flex;
     justify-content: center;
     align-content: center;
+  }
+  p {
+    font-size: 20px;
+  }
+  .headerIndex {
+    height: auto;
   }
   /* Historia */
   .bodyHisto {
@@ -780,8 +852,12 @@ section {
     width: auto;
     overflow: initial;
   }
+  .headerIndex {
+    height: auto;
+  }
   /* Historia */
   .bodyHisto {
+    background-image: none;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 0.4fr 0.7fr 0.7fr 0.5fr;
@@ -802,8 +878,11 @@ section {
     align-content: center;
   }
   .video iframe {
-    height: auto;
-    width: auto;
+    height: 380px;
+    width: 480px;
+  }
+  .h2histo {
+    color: black;
   }
   /* Posiciones */
   #este img {
@@ -930,6 +1009,9 @@ section {
     justify-self: center;
     grid-area: img2;
   }
+  main {
+    margin: 0px;
+  }
 }
 @media (min-width: 10px) and (max-width: 520px) {
   .bodyIndex {
@@ -955,10 +1037,14 @@ section {
     align-self: center;
     justify-self: center;
   }
+  .headerIndex {
+    height: auto;
+  }
   main {
     margin: 0px;
   }
   .bodyHisto {
+    background-image: none;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
@@ -972,6 +1058,9 @@ section {
     justify-self: center;
     align-items: center;
   }
+  .h2histo {
+    color: black;
+  }
   #playoffs {
     margin-top: 15px;
   }
@@ -983,17 +1072,19 @@ section {
     align-self: left;
     margin-bottom: 5px;
   }
-  h3 {
-    position: relative;
-    right: 25px;
-    margin-bottom: 15px;
-  }
   .footerIndx {
     margin-left: 35px;
   }
   .footerHisto {
-    margin-left: 45px;
-    width: 300px;
+    width: auto;
+  }
+  .footerHisto p {
+    width: 350px;
+    padding-left: 15px;
+  }
+  .footerHisto h3 {
+    padding-left: 60px;
+    margin-bottom: 15px;
   }
   .video iframe {
     width: 290px;
@@ -1003,7 +1094,7 @@ section {
   .bodyPosi {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 0.3fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.3fr 1fr 0.3fr 0.5fr;
     grid-template-areas: "header" "este" "oeste" "footer";
   }
   #este {
@@ -1026,18 +1117,21 @@ section {
     padding-bottom: 10px;
   }
   .footerPosi {
-    margin-left: 50px;
-    margin-top: 20px;
+    height: 300px;
   }
   .footerPosi h3 {
     font-size: 15px;
   }
   .footerPosi p {
-    font-size: 13px;
+    font-size: 25px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    width: auto;
   }
   .footerPosi img {
     height: auto;
-    width: 30px;
+    width: 45px;
+    padding-top: 30px;
   }
   .bodyContacto {
     display: grid;
@@ -1148,6 +1242,11 @@ section {
     width: 27em;
     align-self: center;
     justify-self: center;
+  }
+  .footerFoto p {
+    font-size: 25px;
+    padding-top: 15px;
+    width: 350px;
   }
   /* Campeones */
   .bodyCampeones {
