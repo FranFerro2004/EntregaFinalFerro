@@ -62,31 +62,18 @@
     
     <main class="mainContacto">
 
-        <form >
-    
-            <div>
-
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre">
-
+        <form id="formContacto">
+            <div id="mailInput" class="mb-3">
+                <label for="email" class="form-label mail">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu correo electronico">
             </div>
-        
-            <div>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-
+            <div id="textInput" class="mb-3">
+                <label for="mensaje" class="form-label mensaje">Mensaje:</label>
+                <textarea name="mensaje" class="form-control" id="mensaje" rows="3"></textarea>
             </div>
-
-            <div>
-
-                <label for="mensaje">Deja tu mensaje aca:</label>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
-
+            <div id="btnContact">
+                <button type="submit" value="Enviar" class="btn btn-outline-primary">Enviar</button>
             </div>
-
-            <input  type="submit" value="Enviar">
-    
         </form>
 
     </main>

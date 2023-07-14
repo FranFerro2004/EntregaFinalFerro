@@ -566,6 +566,51 @@ section {
   width: 50px;
 }
 
+.formContacto {
+  display: grid;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "mail" "text" "boton";
+}
+
+#mailInput {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  grid-area: mail;
+  width: 250px;
+  justify-self: center;
+  align-self: center;
+}
+
+.mail {
+  align-self: center;
+  justify-self: center;
+}
+
+#textInput {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  grid-area: text;
+  width: 250px;
+  justify-self: center;
+  align-self: center;
+}
+
+.mensaje {
+  align-self: center;
+  justify-self: center;
+}
+
+#btnContact {
+  display: flex;
+  grid-area: boton;
+  justify-content: center;
+  align-self: center;
+}
+
 @media screen and (min-width: 1431px) and (max-width: 1850px) {
   .bodyHisto {
     background-image: none;
@@ -845,10 +890,7 @@ section {
     height: auto;
   }
   .bodyFoto {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 220px 1fr 30px;
-    grid-template-areas: "header" "main" "footer";
+    display: contents;
   }
   .mainFoto {
     grid-area: main;
@@ -974,10 +1016,7 @@ section {
   }
   /* Fotos */
   .bodyFoto {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 220px 1fr 30px;
-    grid-template-areas: "header" "main" "footer";
+    display: contents;
   }
   .mainFoto {
     display: grid;
@@ -988,56 +1027,56 @@ section {
   #foto1 {
     grid-area: foto1;
     height: auto;
-    width: 41em;
+    width: 100%;
     align-self: center;
     justify-self: center;
   }
   #foto2 {
     grid-area: foto2;
     height: auto;
-    width: 41em;
+    width: 100%;
     align-self: center;
     justify-self: center;
   }
   #foto3 {
     grid-area: foto3;
     height: auto;
-    width: 41em;
+    width: 100%;
     align-self: center;
     justify-self: center;
   }
   #foto4 {
     grid-area: foto4;
     height: auto;
-    width: 41em;
+    width: 100%;
     align-self: center;
     justify-self: center;
   }
   #foto5 {
     grid-area: foto5;
     height: auto;
-    width: 41em;
+    width: 100%;
     align-self: center;
     justify-self: center;
   }
   #foto6 {
     grid-area: foto6;
     height: auto;
-    width: 41em;
+    width: 100%;
     align-self: center;
     justify-self: center;
   }
   #foto7 {
     grid-area: foto7;
     height: auto;
-    width: 41em;
+    width: 100%;
     align-self: center;
     justify-self: center;
   }
   #foto8 {
     grid-area: foto8;
     height: auto;
-    width: 41em;
+    width: 100%;
     align-self: center;
     justify-self: center;
   }
@@ -1255,10 +1294,7 @@ section {
   }
   /* Fotos */
   .bodyFoto {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.14fr 1fr 30px;
-    grid-template-areas: "header" "main" "footer";
+    display: contents;
   }
   .mainFoto {
     display: grid;
@@ -1269,56 +1305,56 @@ section {
   #foto1 {
     grid-area: foto1;
     height: auto;
-    width: 27em;
+    width: 23em;
     align-self: center;
     justify-self: center;
   }
   #foto2 {
     grid-area: foto2;
     height: auto;
-    width: 27em;
+    width: 23em;
     align-self: center;
     justify-self: center;
   }
   #foto3 {
     grid-area: foto3;
     height: auto;
-    width: 27em;
+    width: 23em;
     align-self: center;
     justify-self: center;
   }
   #foto4 {
     grid-area: foto4;
     height: auto;
-    width: 27em;
+    width: 23em;
     align-self: center;
     justify-self: center;
   }
   #foto5 {
     grid-area: foto5;
     height: auto;
-    width: 27em;
+    width: 23em;
     align-self: center;
     justify-self: center;
   }
   #foto6 {
     grid-area: foto6;
     height: auto;
-    width: 27em;
+    width: 23em;
     align-self: center;
     justify-self: center;
   }
   #foto7 {
     grid-area: foto7;
     height: auto;
-    width: 27em;
+    width: 23em;
     align-self: center;
     justify-self: center;
   }
   #foto8 {
     grid-area: foto8;
     height: auto;
-    width: 27em;
+    width: 23em;
     align-self: center;
     justify-self: center;
   }
