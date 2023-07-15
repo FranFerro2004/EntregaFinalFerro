@@ -10,10 +10,6 @@
     @content
 }
 
-main{
-    margin-left: 25px;
-
-}
 
 .logoNBA{
     width: 150px;
@@ -142,18 +138,37 @@ main{
 }
 
 .footerContacto{ 
-    margin-top: 25px;
-
-
-    img{
-    max-width: 100%;
-    height: 50px;
-    width: 50px;
-
+    
+    position: relative;
+    top: 100px;    
+    background-color: white;
+    height: 155px;
+    border-radius: 60px;
+    @include gridBase(grid, repeat( 2, 1fr), repeat( 2, 1fr)){
+        grid-template-areas: 
+        "h3 logos"
+        "p      p"
+        ;
     }
+    
+
 
     p{
-        margin: 0px;
+        grid-area: p;
+        justify-self: center;
+        align-self: center;
+    }
+
+    img{
+        max-width: 100%;
+        height: 50px;
+        width: 50px;
+    
+    }
+
+    li{
+        list-style: none;
+        
     }
 
     a{
@@ -163,9 +178,22 @@ main{
     
     }
 
-    li{
-        display: inline;
-        padding: 15px;
+    ul{
+        grid-area: logos;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        position: relative;
+        top: 25px;
+        right: 60px;
+    }
+
+    h3{
+        grid-area: h3;
+        align-self: center;
+        justify-self: center;
+        padding-top: 15px;
     }
 
 }
@@ -186,17 +214,7 @@ section{
 
 }
 
-.imgContact{
-    background-image: url(../imagenes/imagen\ dunk.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 800px;
-    display: block;
-    margin-left: 0px;
-    
-    
-}
-
+    /* Historia */
 
 .bodyHisto{
     background-image: url(../imagenes/nba\ foto\ vieja.jpeg);
@@ -299,6 +317,8 @@ section{
     }
 
 }   
+
+    /* Index */
 
 .bodyIndex{
     background-image: url(../imagenes/curry\ jugando.jpg);
@@ -415,6 +435,8 @@ section{
     padding-top: 20px;
 
 }
+
+    /* Fotos */
 
 .bodyFoto{
     display: grid;
@@ -569,6 +591,8 @@ section{
     
 }
 
+    /* Posiciones */
+
 @mixin conferencias{
     display: flex;
     justify-items: center;
@@ -576,6 +600,8 @@ section{
     flex-direction: column;
     flex-wrap: wrap;
 }
+
+
 
 #oeste{
     @include conferencias
@@ -588,6 +614,8 @@ section{
 .headerPosi{
     margin-bottom: 40px;
 }
+
+    /* Campeones */
 
 .mainCampeones{
     @include gridBase(grid, repeat(2, 1fr),0.5fr repeat(2, 600px)){
@@ -637,12 +665,6 @@ section{
     grid-area: img2;
 }
 
-.mainContacto{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-
-}
 
 .footerCampeones{
     margin: 30px;
@@ -675,8 +697,25 @@ section{
 
 }   
 
-.formContacto{
-    display: grid;
+    /* Contacto */
+
+.bodyContacto{
+    @include gridBase(grid, 1fr, 0.3fr 5fr 0.5fr){
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        ;
+    }
+
+}
+
+.headerContacto{
+    grid-area: header;
+
+}
+
+#formContacto{
     @include gridBase(grid, 1fr, repeat(3, 1fr)){
         grid-template-areas: 
         "mail"
@@ -687,6 +726,16 @@ section{
 
 }
 
+.mainContacto{
+    background-image: url(../imagenes/imagen\ dunk.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fill;
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+
+}
 
 #mailInput{
     display: flex;
@@ -702,6 +751,8 @@ section{
 .mail{
     align-self: center;
     justify-self: center;
+        color: white;
+    
 }
 
 #textInput{
@@ -718,6 +769,7 @@ section{
 .mensaje{
     align-self: center;
     justify-self: center;
+    color: white;
 }
 
 #btnContact{
@@ -730,6 +782,7 @@ section{
 
 @media screen and (min-width: 1431px) and (max-width: 1850px){
 
+    /* Historia */
 
     .bodyHisto{
         background-image: none;
@@ -760,6 +813,8 @@ section{
 
     }
 
+    /* Index */
+
     .bodyIndex{
         background-image: none;
     }
@@ -778,6 +833,20 @@ section{
 
     .headerIndex{
         height: auto;
+    }
+
+    /* Contacto */
+
+    .mainContacto{
+        background-image: none;
+    }
+    
+    .mensaje{
+        color: black;
+    }
+
+    .mail{
+        color: black;
     }
 
 
@@ -869,6 +938,19 @@ section{
         }
     }
 
+    /* Contacto */
+
+    .mainContacto{
+        background-image: none;
+    }
+
+    .mensaje{
+        color: black;
+    }
+
+    .mail{
+        color: black;
+    }
 }
 
 @media screen and (min-width: 856px) and (max-width: 1024px){
@@ -968,7 +1050,8 @@ section{
     
 
 .mainContacto{
-    grid-area: "main";
+    background-image: none;
+    grid-area: main;
     display: flex;
     justify-content: center;
     
@@ -982,9 +1065,18 @@ header{
     grid-area: footer;
 }
 
+.mensaje{
+    color: black;
+}
+
+.mail{
+    color: black;
+}
+
 /* Fotos */
 
 .mainFoto{
+    background-image: none;
     @include gridBase(grid, 1fr, 0.3fr repeat(7, 1fr) 1.3fr){
         grid-template-areas:
         "h2"
@@ -1050,6 +1142,8 @@ header{
 }
 
 @media screen and (min-width: 769px) and (max-width: 855px){
+
+    /* Index */
 
     .bodyIndex{
         background-image: none;
@@ -1148,6 +1242,7 @@ header{
     }
     
     .mainFoto{
+        background-image: none;
         grid-area: main;
         @include gridBase(grid, 1fr, 0.3fr repeat(7, 1fr) 1.3fr){
             grid-template-areas:
@@ -1211,7 +1306,19 @@ header{
         @include imgsFoto
     }
     
+    /* Contacto */
+
+    .mainContacto{
+        background-image: none;
+    }
     
+    .mensaje{
+        color: black;
+    }
+
+    .mail{
+        color: black;
+    }
 
 }
 
@@ -1319,6 +1426,7 @@ padding-left: 40px;
 }
 
 .mainFoto{
+    background-image: none;
     @include gridBase(grid, 1fr, 0.3fr repeat(7, 1fr) 1.3fr){
         grid-template-areas:
         "h2"
@@ -1445,12 +1553,28 @@ main{
     margin: 0px;
 }
 
+    /* Contacto */
+
+    .mainContacto{
+        background-image: none;
+    }
+
+    .mensaje{
+        color: black;
+    }
+
+    .mail{
+        color: black;
+    }
+
 }
 
 
 
 
 @media (min-width: 10px) and (max-width: 520px){
+
+    /* Index */
 
     .bodyIndex{
         background-image: none;
@@ -1494,6 +1618,21 @@ main{
         margin: 0px;
     }
 
+    #playoffs{
+        margin-top: 15px;
+    }
+
+    #sectionIndex{
+        position: relative;
+        right: 25px;
+    }
+
+    .footerIndx{
+        margin-left: 35px;
+    }
+
+    /* Historia */
+
     .bodyHisto{
         background-image: none;
         display: grid;
@@ -1523,23 +1662,10 @@ main{
         color: black;
     }
 
-    #playoffs{
-        margin-top: 15px;
-    }
-
-    #sectionIndex{
-        position: relative;
-        right: 25px;
-    }
-
     h2{
         align-self: left;
         margin-bottom: 5px;
 
-    }
-
-    .footerIndx{
-        margin-left: 35px;
     }
 
     .footerHisto{
@@ -1565,7 +1691,8 @@ main{
         }
     }
 
-    
+    /* Posiciones */
+
     .bodyPosi{
         display: grid;
         grid-template-columns: 100%;
@@ -1625,6 +1752,8 @@ main{
         }
     }
 
+    /* Contacto */
+
     .bodyContacto{
         display: grid;
         grid-template-columns: 100%;
@@ -1636,11 +1765,20 @@ main{
         ;
     }
 
+    .mensaje{
+        color: black;
+    }
+
+    .mail{
+        color: black;
+    }
+
     header{
         grid-area: "header";
     }
 
     .mainContacto{
+        background-image: none;
         grid-area: "main";
     }
 
@@ -1694,6 +1832,7 @@ main{
     }
 
     .mainFoto{
+        background-image: none;
         @include gridBase(grid, 1fr, 0.3fr repeat(7, 1fr) 1.3fr){
             grid-template-areas:
             "h2"
@@ -1787,6 +1926,7 @@ main{
 }
 
 .mainCampeones{
+    background-image: none;
     @include gridBase(grid, 1fr, 0.3fr repeat(4, 1fr)){
         grid-template-areas: 
         "texto"

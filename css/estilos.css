@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-main {
-  margin-left: 25px;
-}
-
 .logoNBA {
   width: 150px;
 }
@@ -105,24 +101,49 @@ main {
 }
 
 .footerContacto {
-  margin-top: 25px;
+  position: relative;
+  top: 100px;
+  background-color: white;
+  height: 155px;
+  border-radius: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "h3 logos" "p      p";
+}
+.footerContacto p {
+  grid-area: p;
+  justify-self: center;
+  align-self: center;
 }
 .footerContacto img {
   max-width: 100%;
   height: 50px;
   width: 50px;
 }
-.footerContacto p {
-  margin: 0px;
+.footerContacto li {
+  list-style: none;
 }
 .footerContacto a {
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
-.footerContacto li {
-  display: inline;
-  padding: 15px;
+.footerContacto ul {
+  grid-area: logos;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: relative;
+  top: 25px;
+  right: 60px;
+}
+.footerContacto h3 {
+  grid-area: h3;
+  align-self: center;
+  justify-self: center;
+  padding-top: 15px;
 }
 
 .bloque {
@@ -138,15 +159,7 @@ section {
   margin: 25px;
 }
 
-.imgContact {
-  background-image: url(../imagenes/imagen\ dunk.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 800px;
-  display: block;
-  margin-left: 0px;
-}
-
+/* Historia */
 .bodyHisto {
   background-image: url(../imagenes/nba\ foto\ vieja.jpeg);
   background-size: cover;
@@ -231,6 +244,7 @@ section {
   padding-top: 15px;
 }
 
+/* Index */
 .bodyIndex {
   background-image: url(../imagenes/curry\ jugando.jpg);
   background-size: cover;
@@ -326,6 +340,7 @@ section {
   padding-top: 20px;
 }
 
+/* Fotos */
 .bodyFoto {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -468,6 +483,7 @@ section {
   height: 50px;
 }
 
+/* Posiciones */
 #oeste {
   display: flex;
   justify-items: center;
@@ -488,6 +504,7 @@ section {
   margin-bottom: 40px;
 }
 
+/* Campeones */
 .mainCampeones {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -537,12 +554,6 @@ section {
   grid-area: img2;
 }
 
-.mainContacto {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
 .footerCampeones {
   margin: 30px;
   margin-left: 50px;
@@ -566,12 +577,33 @@ section {
   width: 50px;
 }
 
-.formContacto {
+/* Contacto */
+.bodyContacto {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 5fr 0.5fr;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.headerContacto {
+  grid-area: header;
+}
+
+#formContacto {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: "mail" "text" "boton";
+}
+
+.mainContacto {
+  background-image: url(../imagenes/imagen\ dunk.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fill;
+  grid-area: main;
+  display: flex;
+  justify-content: center;
 }
 
 #mailInput {
@@ -587,6 +619,7 @@ section {
 .mail {
   align-self: center;
   justify-self: center;
+  color: white;
 }
 
 #textInput {
@@ -602,6 +635,7 @@ section {
 .mensaje {
   align-self: center;
   justify-self: center;
+  color: white;
 }
 
 #btnContact {
@@ -612,6 +646,7 @@ section {
 }
 
 @media screen and (min-width: 1431px) and (max-width: 1850px) {
+  /* Historia */
   .bodyHisto {
     background-image: none;
     display: grid;
@@ -629,6 +664,7 @@ section {
     height: 400px;
     width: 850px;
   }
+  /* Index */
   .bodyIndex {
     background-image: none;
   }
@@ -640,6 +676,16 @@ section {
   }
   .headerIndex {
     height: auto;
+  }
+  /* Contacto */
+  .mainContacto {
+    background-image: none;
+  }
+  .mensaje {
+    color: black;
+  }
+  .mail {
+    color: black;
   }
 }
 @media screen and (min-width: 1025px) and (max-width: 1430px) {
@@ -691,6 +737,16 @@ section {
   .video iframe {
     height: 450px;
     width: 900px;
+  }
+  /* Contacto */
+  .mainContacto {
+    background-image: none;
+  }
+  .mensaje {
+    color: black;
+  }
+  .mail {
+    color: black;
   }
 }
 @media screen and (min-width: 856px) and (max-width: 1024px) {
@@ -754,7 +810,8 @@ section {
   }
   /* Contacto */
   .mainContacto {
-    grid-area: "main";
+    background-image: none;
+    grid-area: main;
     display: flex;
     justify-content: center;
   }
@@ -764,8 +821,15 @@ section {
   .footerContacto {
     grid-area: footer;
   }
+  .mensaje {
+    color: black;
+  }
+  .mail {
+    color: black;
+  }
   /* Fotos */
   .mainFoto {
+    background-image: none;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.3fr repeat(7, 1fr) 1.3fr;
@@ -829,6 +893,7 @@ section {
   }
 }
 @media screen and (min-width: 769px) and (max-width: 855px) {
+  /* Index */
   .bodyIndex {
     background-image: none;
     grid-template-columns: 100%;
@@ -893,6 +958,7 @@ section {
     display: contents;
   }
   .mainFoto {
+    background-image: none;
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
@@ -954,6 +1020,16 @@ section {
     width: 41em;
     align-self: center;
     justify-self: center;
+  }
+  /* Contacto */
+  .mainContacto {
+    background-image: none;
+  }
+  .mensaje {
+    color: black;
+  }
+  .mail {
+    color: black;
   }
 }
 @media screen and (min-width: 521px) and (max-width: 768px) {
@@ -1019,6 +1095,7 @@ section {
     display: contents;
   }
   .mainFoto {
+    background-image: none;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.3fr repeat(7, 1fr) 1.3fr;
@@ -1130,8 +1207,19 @@ section {
   main {
     margin: 0px;
   }
+  /* Contacto */
+  .mainContacto {
+    background-image: none;
+  }
+  .mensaje {
+    color: black;
+  }
+  .mail {
+    color: black;
+  }
 }
 @media (min-width: 10px) and (max-width: 520px) {
+  /* Index */
   .bodyIndex {
     background-image: none;
     display: grid;
@@ -1161,6 +1249,17 @@ section {
   main {
     margin: 0px;
   }
+  #playoffs {
+    margin-top: 15px;
+  }
+  #sectionIndex {
+    position: relative;
+    right: 25px;
+  }
+  .footerIndx {
+    margin-left: 35px;
+  }
+  /* Historia */
   .bodyHisto {
     background-image: none;
     display: grid;
@@ -1179,19 +1278,9 @@ section {
   .h2histo {
     color: black;
   }
-  #playoffs {
-    margin-top: 15px;
-  }
-  #sectionIndex {
-    position: relative;
-    right: 25px;
-  }
   h2 {
     align-self: left;
     margin-bottom: 5px;
-  }
-  .footerIndx {
-    margin-left: 35px;
   }
   .footerHisto {
     width: auto;
@@ -1209,6 +1298,7 @@ section {
     height: 250px;
     align-self: center;
   }
+  /* Posiciones */
   .bodyPosi {
     display: grid;
     grid-template-columns: 100%;
@@ -1251,16 +1341,24 @@ section {
     width: 45px;
     padding-top: 30px;
   }
+  /* Contacto */
   .bodyContacto {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 0.3fr 1fr 0.5fr;
     grid-template-areas: "header" "main" "footer";
   }
+  .mensaje {
+    color: black;
+  }
+  .mail {
+    color: black;
+  }
   header {
     grid-area: "header";
   }
   .mainContacto {
+    background-image: none;
     grid-area: "main";
   }
   .footerContacto {
@@ -1297,6 +1395,7 @@ section {
     display: contents;
   }
   .mainFoto {
+    background-image: none;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.3fr repeat(7, 1fr) 1.3fr;
@@ -1377,6 +1476,7 @@ section {
     grid-area: footer;
   }
   .mainCampeones {
+    background-image: none;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.3fr repeat(4, 1fr);
